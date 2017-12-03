@@ -47,43 +47,43 @@
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/select2/select2.css">
 
-<header>
-  <div class="headerpanel">
+  <header>
+    <div class="headerpanel">
 
-    <div class="logopanel">
-      <h4><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/ristek_dikti_logo.png" height="30" hspace="5">    Media Monitoring</a></h4>
+      <div class="logopanel">
+        <h4><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/ristek_dikti_logo.png" height="30" hspace="5">    Media Monitoring</a></h4>
 
-    </div><!-- logopanel -->
+      </div><!-- logopanel -->
 
-    <div class="headerbar">
+      <div class="headerbar">
 
-      <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
 
-      <!-- <div class="searchpanel">
+        <!-- <div class="searchpanel">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-          </span>
-        </div>
-      </div> -->
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </div> -->
 
-      <div class="header-right">
-        <ul class="headermenu">
-          <li>
+  <div class="header-right">
+    <ul class="headermenu">
+      <li>
 
-          </li>
-          <li>
-            <a href="<?php echo site_url('Login/process_logout');?>">
-            <button id="" class="btn">
-              Logout
-              <i class="fa fa-sign-out"></i>
-            </button>
-          </li>
-        </ul>
-      </div><!-- header-right -->
-    </div><!-- headerbar -->
-  </div><!-- header-->
+      </li>
+      <li>
+        <a href="<?php echo site_url('Login/process_logout');?>">
+          <button id="" class="btn">
+            Logout
+            <i class="fa fa-sign-out"></i>
+          </button>
+        </li>
+      </ul>
+    </div><!-- header-right -->
+  </div><!-- headerbar -->
+</div><!-- header-->
 </header>
 
 <section>
@@ -120,25 +120,25 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="active"><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li class="nav-parent"><a href=""><i class="fa fa-newspaper-o"></i> <span>Berita</span></a>
-                <ul class="children">
-                  <?php
-                  $i=0;
-                    for($i<0;$i<$jml;$i++){
-                      echo "<li ><a href=".site_url('Berita/tabel_berita/').$id_berita[$i]." style='margin-bottom:15px;'>".$topik_berita[$i]."</a></li>";
-                      // echo "<hr>";
-                    }
-                   ?>
-                </ul>
-              </li>
-              <li class="nav-parent"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
-                <ul class="children">
-                  <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
-                </ul>
-              </li>
+              <ul class="children">
+                <?php
+                $i=0;
+                for($i<0;$i<$jml;$i++){
+                  echo "<li ><a href=".site_url('Berita/tabel_berita/').$id_berita[$i]." style='margin-bottom:15px;'>".$topik_berita[$i]."</a></li>";
+                  // echo "<hr>";
+                }
+                ?>
+              </ul>
+            </li>
+            <li class="nav-parent"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
+              <ul class="children">
+                <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+              </ul>
+            </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
             <li><a href="<?php echo site_url('Trend');?>"><i class="fa fa-list-ol"></i> <span>Trend Berita</span></a></li>
             <li><a href="<?php echo site_url('Grafik');?>"><i class="fa fa-pie-chart"></i> <span>Grafik</span></a></li>
@@ -147,11 +147,11 @@
 
         <!-- ######################## POST MENu ##################### -->
 
-       <div class="tab-pane" id="emailmenu">
-         <div class="sidebar-btn-wrapper">
-           <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>
-         </div>
-       </div><!-- tab-pane -->
+        <div class="tab-pane" id="emailmenu">
+          <div class="sidebar-btn-wrapper">
+            <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>
+          </div>
+        </div><!-- tab-pane -->
 
       </div><!-- tab-content -->
 
@@ -161,176 +161,176 @@
   <div class="mainpanel">
 
     <!--<div class="pageheader">
-      <h2><i class="fa fa-home"></i> Dashboard</h2>
-    </div>-->
+    <h2><i class="fa fa-home"></i> Dashboard</h2>
+  </div>-->
 
-    <div class="contentpanel">
-      <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home mr5"></i> Home</a></li>
-        <li class="active">Edit Berita</li>
-      </ol>
+  <div class="contentpanel">
+    <ol class="breadcrumb breadcrumb-quirk">
+      <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home mr5"></i> Home</a></li>
+      <li class="active">Edit Berita</li>
+    </ol>
 
-      <div class="panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">Edit Berita</h4>
-              <p>Isi Topik Berita, Judul Berita, dan Isi Berita</p>
-            </div>
-            <div class="panel-body">
-            <?php
-              if(isset($message)){
-             ?>
-              <div class="alert alert-success">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong><?php echo $message;?></strong>
-              </div>
-            <?php }?>
-              <form action="<?php echo site_url('Berita/edit_berita')."/$id_isi_berita"; ?>" method=post id='form_berita'>
-                <div class="form-group">
-                  <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
-                    <option value=''>Sub Topik Berita</option>
-                    <?php
-                    $i=0;
-                      for($i<0;$i<$jml_sub_topik;$i++){
-                        // echo "<hr>";
-                        if($kd_sub_topik ==  $id_sub_topik[$i]){
-                          echo "<option value=".$id_sub_topik[$i]." selected>".$nama_sub_topik[$i]."</option>";
-                        }else{
-                          echo "<option value=".$id_sub_topik[$i].">".$nama_sub_topik[$i]."</option>";
-                        }
-                      }
-                     ?>
-                  </select>
-                </div>
+    <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">Edit Berita</h4>
+        <p>Isi Topik Berita, Judul Berita, dan Isi Berita</p>
+      </div>
+      <div class="panel-body">
+        <?php
+        if(isset($message)){
+          ?>
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <strong><?php echo $message;?></strong>
+          </div>
+        <?php }?>
+        <form action="<?php echo site_url('Berita/edit_berita')."/$id_isi_berita"; ?>" method=post id='form_berita'>
+          <div class="form-group">
+            <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
+              <option value=''>Sub Topik Berita</option>
+              <?php
+              $i=0;
+              for($i<0;$i<$jml_sub_topik;$i++){
+                // echo "<hr>";
+                if($kd_sub_topik ==  $id_sub_topik[$i]){
+                  echo "<option value=".$id_sub_topik[$i]." selected>".$nama_sub_topik[$i]."</option>";
+                }else{
+                  echo "<option value=".$id_sub_topik[$i].">".$nama_sub_topik[$i]."</option>";
+                }
+              }
+              ?>
+            </select>
+          </div>
 
-                <div class="form-group">
-                  <select name='id_berita' id="cmb_topik" class="form-control select_search" style="width: 100%" data-placeholder="Topik Berita" required>
-                    <option value=''>Pilih</option>
-                    <?php
-                    $i=0;
-                    for($i<0;$i<$jml_topik;$i++){
-                      // echo "<hr>";
-                      if($kd_topik ==  $id_berita[$i]){
-                        echo "<option value=".$id_berita[$i]." selected>".$topik_berita[$i]."</option>";
-                      }else{
-                        echo "<option value=".$id_berita[$i].">".$topik_berita[$i]."</option>";
-                      }
-                    }
-                     ?>
-                  </select>
-                </div>
+          <div class="form-group">
+            <select name='id_berita' id="cmb_topik" class="form-control select_search" style="width: 100%" data-placeholder="Topik Berita" required>
+              <option value=''>Pilih</option>
+              <?php
+              $i=0;
+              for($i<0;$i<$jml_topik;$i++){
+                // echo "<hr>";
+                if($kd_topik ==  $id_berita[$i]){
+                  echo "<option value=".$id_berita[$i]." selected>".$topik_berita[$i]."</option>";
+                }else{
+                  echo "<option value=".$id_berita[$i].">".$topik_berita[$i]."</option>";
+                }
+              }
+              ?>
+            </select>
+          </div>
 
-              <div class="form-group">
-                <input name='judul' type="text" value='<?php echo $judul;?>' placeholder="Judul Berita" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <select name='id_media' id="select1" class="form-control" style="width: 100%" data-placeholder="Sumber" required>
-                  <option value="">&nbsp;</option>
-                  <?php
-                  $i=0;
-                    for($i<0;$i<$jml_media;$i++){
-                      // echo "<hr>";
-                      if($sumber == $id_media[$i]){
-                        echo "<option value=".$id_media[$i]." selected>".$nama_media[$i]."</option>";
-                      }else{
-                        echo "<option value=".$id_media[$i].">".$nama_media[$i]."</option>";
-                      }
-                    }
-                    echo "<option value='Sumber Lain'>Sumber Lain</option>";
-                   ?>
+          <div class="form-group">
+            <input name='judul' type="text" value='<?php echo $judul;?>' placeholder="Judul Berita" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <select name='id_media' id="select1" class="form-control" style="width: 100%" data-placeholder="Sumber" required>
+              <option value="">&nbsp;</option>
+              <?php
+              $i=0;
+              for($i<0;$i<$jml_media;$i++){
+                // echo "<hr>";
+                if($sumber == $id_media[$i]){
+                  echo "<option value=".$id_media[$i]." selected>".$nama_media[$i]."</option>";
+                }else{
+                  echo "<option value=".$id_media[$i].">".$nama_media[$i]."</option>";
+                }
+              }
+              echo "<option value='Sumber Lain'>Sumber Lain</option>";
+              ?>
 
-                </select>
-              </div>
-                <div class="form-group">
-                  <select name='id_narasumber' id="cmb_narasumber" class="form-control select_search" style="width: 100%" data-placeholder="Narasumber 1" required>
-                    <option value="">Narasumber 1</option>
-                    <?php
-                    $i=0;
-                      for($i<0;$i<$jml_narasumber;$i++){
-                        // echo "<hr>";
-                        if($narasumber_inti1 == $id_narasumber[$i]){
-                          echo "<option value=".$id_narasumber[$i]." selected>".$nama_narasumber[$i]."</option>";
+            </select>
+          </div>
+          <div class="form-group">
+            <select name='id_narasumber' id="cmb_narasumber" class="form-control select_search" style="width: 100%" data-placeholder="Narasumber 1" required>
+              <option value="">Narasumber 1</option>
+              <?php
+              $i=0;
+              for($i<0;$i<$jml_narasumber;$i++){
+                // echo "<hr>";
+                if($narasumber_inti1 == $id_narasumber[$i]){
+                  echo "<option value=".$id_narasumber[$i]." selected>".$nama_narasumber[$i]."</option>";
 
-                        }else{
-                          echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
-                        }
-                      }
-                     ?>
+                }else{
+                  echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
+                }
+              }
+              ?>
 
-                  </select>
-              </div>
-              <div class="form-group">
-                <select name='sub_narasumber' id="cmb_sub_narasumber" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 1" required>
-                <option value="">Sub Narasumber 1</option>
-                <?php
-                  foreach($subnarsum1 as $row){
-                    // echo "<hr>";
-                    if($id_narasumber1 == $row['id_sub_narasumber']){
-                      echo "<option value=".$row['id_sub_narasumber']." selected>".$row['nama_sub_narasumber']."</option>";
+            </select>
+          </div>
+          <div class="form-group">
+            <select name='sub_narasumber' id="cmb_sub_narasumber" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 1" required>
+              <option value="">Sub Narasumber 1</option>
+              <?php
+              foreach($subnarsum1 as $row){
+                // echo "<hr>";
+                if($id_narasumber1 == $row['id_sub_narasumber']){
+                  echo "<option value=".$row['id_sub_narasumber']." selected>".$row['nama_sub_narasumber']."</option>";
 
-                    }else{
-                      echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
-                    }
-                  }
-                 ?>
-                </select>
-              </div>
-              <div class="form-group">
-                <select name='id_narasumber2' id="cmb_narasumber2" class="form-control select_search" style="width: 100%" data-placeholder="Narasumber 2">
-                  <option value="">Narasumber 2</option>
-                  <?php
-                  $i=0;
-                  for($i<0;$i<$jml_narasumber;$i++){
-                    // echo "<hr>";
-                    if($narasumber_inti2 == $id_narasumber[$i]){
-                      echo "<option value=".$id_narasumber[$i]." selected>".$nama_narasumber[$i]."</option>";
+                }else{
+                  echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
+                }
+              }
+              ?>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name='id_narasumber2' id="cmb_narasumber2" class="form-control select_search" style="width: 100%" data-placeholder="Narasumber 2">
+              <option value="">Narasumber 2</option>
+              <?php
+              $i=0;
+              for($i<0;$i<$jml_narasumber;$i++){
+                // echo "<hr>";
+                if($narasumber_inti2 == $id_narasumber[$i]){
+                  echo "<option value=".$id_narasumber[$i]." selected>".$nama_narasumber[$i]."</option>";
 
-                    }else{
-                      echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
-                    }
-                  }
-                   ?>
+                }else{
+                  echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
+                }
+              }
+              ?>
 
-                </select>
-            </div>
-            <div class="form-group">
-              <select name='sub_narasumber2' id="cmb_sub_narasumber2" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 2">
+            </select>
+          </div>
+          <div class="form-group">
+            <select name='sub_narasumber2' id="cmb_sub_narasumber2" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 2">
               <option value="">Sub Narasumber 2</option>
               <?php
-                foreach($subnarsum2 as $row){
-                  // echo "<hr>";
-                  if($id_narasumber2 == $row['id_sub_narasumber']){
-                    echo "<option value=".$row['id_sub_narasumber']." selected>".$row['nama_sub_narasumber']."</option>";
+              foreach($subnarsum2 as $row){
+                // echo "<hr>";
+                if($id_narasumber2 == $row['id_sub_narasumber']){
+                  echo "<option value=".$row['id_sub_narasumber']." selected>".$row['nama_sub_narasumber']."</option>";
 
-                  }else{
-                    echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
-                  }
+                }else{
+                  echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
                 }
-               ?>
-              </select>
-            </div>
+              }
+              ?>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <select name='id_narasumber3' id="cmb_narasumber3" class="form-control select_search" style="width: 100%" data-placeholder="Narasumber 3" >
-                <option value="">Narasumber 3</option>
-                <?php
-                $i=0;
-                for($i<0;$i<$jml_narasumber;$i++){
-                  // echo "<hr>";
-                  if($narasumber_inti3 == $id_narasumber[$i]){
-                    echo "<option value=".$id_narasumber[$i]." selected>".$nama_narasumber[$i]."</option>";
+          <div class="form-group">
+            <select name='id_narasumber3' id="cmb_narasumber3" class="form-control select_search" style="width: 100%" data-placeholder="Narasumber 3" >
+              <option value="">Narasumber 3</option>
+              <?php
+              $i=0;
+              for($i<0;$i<$jml_narasumber;$i++){
+                // echo "<hr>";
+                if($narasumber_inti3 == $id_narasumber[$i]){
+                  echo "<option value=".$id_narasumber[$i]." selected>".$nama_narasumber[$i]."</option>";
 
-                  }else{
-                    echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
-                  }
+                }else{
+                  echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
                 }
-                 ?>
+              }
+              ?>
 
-              </select>
+            </select>
           </div>
           <div class="form-group">
             <select name='sub_narasumber3' id="cmb_sub_narasumber3" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 3" >
-            <option value="">Sub Narasumber 3</option>
-            <?php
+              <option value="">Sub Narasumber 3</option>
+              <?php
               foreach($subnarsum3 as $row){
                 // echo "<hr>";
                 if($id_narasumber3 == $row['id_sub_narasumber']){
@@ -340,7 +340,7 @@
                   echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
                 }
               }
-             ?>
+              ?>
             </select>
           </div>
 
@@ -358,57 +358,57 @@
                   echo "<option value=".$id_narasumber[$i].">".$nama_narasumber[$i]."</option>";
                 }
               }
-               ?>
+              ?>
 
             </select>
-        </div>
-      
-        <div class="form-group">
-          <select name ='sub_narasumber4' id="cmb_sub_narasumber4" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 4">
-          <option value="">Sub Narasumber 4</option>
-          <?php
+          </div>
 
-            foreach($subnarsum4 as $row){
-              // echo "<hr>";
-              if($id_narasumber4 == $row['id_sub_narasumber']){
-                echo "<option value=".$row['id_sub_narasumber']." selected>".$row['nama_sub_narasumber']."</option>";
+          <div class="form-group">
+            <select name ='sub_narasumber4' id="cmb_sub_narasumber4" class="form-control select_search" style="width: 100%" data-placeholder="Sub Narasumber 4">
+              <option value="">Sub Narasumber 4</option>
+              <?php
 
-              }else{
-                echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
+              foreach($subnarsum4 as $row){
+                // echo "<hr>";
+                if($id_narasumber4 == $row['id_sub_narasumber']){
+                  echo "<option value=".$row['id_sub_narasumber']." selected>".$row['nama_sub_narasumber']."</option>";
+
+                }else{
+                  echo "<option value=".$row['id_sub_narasumber'].">".$row['nama_sub_narasumber']."</option>";
+                }
               }
-            }
-           ?>
-          </select>
+              ?>
+            </select>
+          </div>
+
+
+
+          <div class="input-group">
+            <input type="text" name='tgl_berita' value='<?php echo $tgl_berita;?>' class="form-control" placeholder="Tanggal Berita" id="datepicker" required>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+          </div>
+          <div class="form-group" style="margin-top:30px;">
+            <input name='link_berita' value='<?php echo $link_berita;?>' type="text" placeholder="Link Berita" class="form-control" required>
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-addon">Rp</span>
+            <input type="text" value='<?php echo $ad_value; ?>' class="form-control" placeholder="Ad Value" name="ad_value" id='auto_number1'>
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-addon">Rp</span>
+            <input type="text" value='<?php echo $news_value; ?>' class="form-control" placeholder="News Value" name="news_value" id='auto_number2'>
+          </div>
+
+
+          <div class="form-group" style='margin-top:20px;'>
+            <textarea name='isi_berita'  id="autosize" class="form-control" rows="3" placeholder="Isi Berita" required><?php echo strip_tags($isi_berita); ?></textarea>
+          </div>
+          <div class="form-group" style='margin-top:30px;'>
+            <button class="btn btn-primary btn-block" form='form_berita'>Post</button>
+          </div>
         </div>
-
-
-
-              <div class="input-group">
-               <input type="text" name='tgl_berita' value='<?php echo $tgl_berita;?>' class="form-control" placeholder="Tanggal Berita" id="datepicker" required>
-               <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-             </div>
-             <div class="form-group" style="margin-top:30px;">
-               <input name='link_berita' value='<?php echo $link_berita;?>' type="text" placeholder="Link Berita" class="form-control" required>
-             </div>
-
-             <div class="input-group">
-                <span class="input-group-addon">Rp</span>
-                <input type="text" value='<?php echo $ad_value; ?>' class="form-control" placeholder="Ad Value" name="ad_value" id='auto_number1'>
-              </div>
-
-              <div class="input-group">
-                 <span class="input-group-addon">Rp</span>
-                 <input type="text" value='<?php echo $news_value; ?>' class="form-control" placeholder="News Value" name="news_value" id='auto_number2'>
-               </div>
-
-
-              <div class="form-group" style='margin-top:20px;'>
-                <textarea name='isi_berita'  id="autosize" class="form-control" rows="3" placeholder="Isi Berita" required><?php echo strip_tags($isi_berita); ?></textarea>
-              </div>
-              <div class="form-group" style='margin-top:30px;'>
-                <button class="btn btn-primary btn-block" form='form_berita'>Post</button>
-              </div>
-            </div>
       </div>
 
     </div><!-- contentpanel -->
@@ -607,33 +607,33 @@ $(function(){
     });
   });
 
-        $('#auto_number1').keyup(function(event) {
+  $('#auto_number1').keyup(function(event) {
 
-        // skip for arrow keys
-        if(event.which >= 37 && event.which <= 40) return;
+    // skip for arrow keys
+    if(event.which >= 37 && event.which <= 40) return;
 
-        // format number
-        $(this).val(function(index, value) {
-          return value
-          .replace(/\D/g, "")
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-          ;
-        });
-      });
-
-      $('#auto_number2').keyup(function(event) {
-
-      // skip for arrow keys
-      if(event.which >= 37 && event.which <= 40) return;
-
-      // format number
-      $(this).val(function(index, value) {
-        return value
-        .replace(/\D/g, "")
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-        ;
-      });
+    // format number
+    $(this).val(function(index, value) {
+      return value
+      .replace(/\D/g, "")
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      ;
     });
+  });
+
+  $('#auto_number2').keyup(function(event) {
+
+    // skip for arrow keys
+    if(event.which >= 37 && event.which <= 40) return;
+
+    // format number
+    $(this).val(function(index, value) {
+      return value
+      .replace(/\D/g, "")
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      ;
+    });
+  });
 });
 </script>
 

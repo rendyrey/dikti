@@ -41,43 +41,43 @@
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/select2/select2.css">
 
-<header>
-  <div class="headerpanel">
+  <header>
+    <div class="headerpanel">
 
-    <div class="logopanel">
-      <h4><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/ristek_dikti_logo.png" height="30" hspace="5">    Media Monitoring</a></h4>
+      <div class="logopanel">
+        <h4><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/ristek_dikti_logo.png" height="30" hspace="5">    Media Monitoring</a></h4>
 
-    </div><!-- logopanel -->
+      </div><!-- logopanel -->
 
-    <div class="headerbar">
+      <div class="headerbar">
 
-      <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
 
-      <!-- <div class="searchpanel">
+        <!-- <div class="searchpanel">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-          </span>
-        </div>
-      </div> -->
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </div> -->
 
-      <div class="header-right">
-        <ul class="headermenu">
-          <li>
+  <div class="header-right">
+    <ul class="headermenu">
+      <li>
 
-          </li>
-          <li>
-            <a href="<?php echo site_url('Login/process_logout');?>">
-            <button id="" class="btn">
-              Logout
-              <i class="fa fa-sign-out"></i>
-            </button>
-          </li>
-        </ul>
-      </div><!-- header-right -->
-    </div><!-- headerbar -->
-  </div><!-- header-->
+      </li>
+      <li>
+        <a href="<?php echo site_url('Login/process_logout');?>">
+          <button id="" class="btn">
+            Logout
+            <i class="fa fa-sign-out"></i>
+          </button>
+        </li>
+      </ul>
+    </div><!-- header-right -->
+  </div><!-- headerbar -->
+</div><!-- header-->
 </header>
 
 <section>
@@ -115,25 +115,25 @@
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li class="nav-parent"><a href=""><i class="fa fa-newspaper-o"></i> <span>Berita</span></a>
-                <ul class="children">
-                  <?php
-                  $i=0;
-                    for($i<0;$i<$jml;$i++){
-                      echo "<li ><a href=".site_url('Berita/tabel_berita/').$id_berita[$i]." style='margin-bottom:15px;'>".$topik_berita[$i]."</a></li>";
-                      // echo "<hr>";
-                    }
-                   ?>
-                </ul>
-              </li>
-              <li class="nav-parent"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
-                <ul class="children">
-                  <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
-                </ul>
-              </li>
+              <ul class="children">
+                <?php
+                $i=0;
+                for($i<0;$i<$jml;$i++){
+                  echo "<li ><a href=".site_url('Berita/tabel_berita/').$id_berita[$i]." style='margin-bottom:15px;'>".$topik_berita[$i]."</a></li>";
+                  // echo "<hr>";
+                }
+                ?>
+              </ul>
+            </li>
+            <li class="nav-parent"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
+              <ul class="children">
+                <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+              </ul>
+            </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
             <li><a href="<?php echo site_url('Trend');?>"><i class="fa fa-list-ol"></i> <span>Trend Berita</span></a></li>
             <li class='active'><a href="<?php echo site_url('Grafik');?>"><i class="fa fa-pie-chart"></i> <span>Grafik</span></a></li>
@@ -142,11 +142,11 @@
 
         <!-- ######################## POST MENu ##################### -->
 
-       <div class="tab-pane" id="emailmenu">
-         <div class="sidebar-btn-wrapper">
-           <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>
-         </div>
-       </div><!-- tab-pane -->
+        <div class="tab-pane" id="emailmenu">
+          <div class="sidebar-btn-wrapper">
+            <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>
+          </div>
+        </div><!-- tab-pane -->
 
       </div><!-- tab-content -->
 
@@ -156,99 +156,99 @@
   <div class="mainpanel">
 
     <!--<div class="pageheader">
-      <h2><i class="fa fa-home"></i> Dashboard</h2>
-    </div>-->
+    <h2><i class="fa fa-home"></i> Dashboard</h2>
+  </div>-->
 
-    <div class="contentpanel">
-      <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home mr5"></i> Home</a></li>
-        <li class="active">Grafik</li>
-      </ol>
+  <div class="contentpanel">
+    <ol class="breadcrumb breadcrumb-quirk">
+      <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home mr5"></i> Home</a></li>
+      <li class="active">Grafik</li>
+    </ol>
 
-      <div class="panel">
-        <div class="panel-heading">
-          <h2 class="panel-title">Grafik</h2>
-          <p>Monitoring media secara grafik</p></div>
+    <div class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title">Grafik</h2>
+        <p>Monitoring media secara grafik</p></div>
         <div class="panel-body">
           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
           <script type="text/javascript">
-            google.charts.load('current', {'packages':['bar']});
-            google.charts.setOnLoadCallback(drawStuff);
+          google.charts.load('current', {'packages':['bar']});
+          google.charts.setOnLoadCallback(drawStuff);
 
-            function drawStuff() {
+          function drawStuff() {
 
-              var data = google.visualization.arrayToDataTable([
-                // ['Nama','Total Media'],
-                <?php
-                  $i=0;
-                  if($tampil=='topik'){
-                    echo "['Topik Berita','Total Jumlah Topik'],";
-                    for($i=0;$i<$jml_grafik;$i++){
+            var data = google.visualization.arrayToDataTable([
+              // ['Nama','Total Media'],
+              <?php
+              $i=0;
+              if($tampil=='topik'){
+                echo "['Topik Berita','Total Jumlah Topik'],";
+                for($i=0;$i<$jml_grafik;$i++){
 
-                      echo "['".$topik_berita[$i]."',".$jml_topik[$i]."]";
-                      if($i<$jml_grafik-1){
-                        echo ",";
-                      }
-                    }
-                  }else if($tampil=='sub_topik'){
-                    echo "['Topik Berita','Total Jumlah Topik'],";
-                    for($i=0;$i<$jml_grafik;$i++){
-
-                      echo "['".$sub_topik_berita[$i]."',".$jml_sub_topik[$i]."]";
-                      if($i<$jml_grafik-1){
-                        echo ",";
-                      }
-                    }
+                  echo "['".$topik_berita[$i]."',".$jml_topik[$i]."]";
+                  if($i<$jml_grafik-1){
+                    echo ",";
                   }
-                  else if($tampil!='narasumber'){
-                    echo "['','Total Jumlah'],";
-                    for($i=0;$i<$jml_grafik;$i++){
+                }
+              }else if($tampil=='sub_topik'){
+                echo "['Topik Berita','Total Jumlah Topik'],";
+                for($i=0;$i<$jml_grafik;$i++){
 
-                      echo "['".$tone[$i]."',".$jml_tone[$i]."]";
-                      if($i<$jml_grafik-1){
-                        echo ",";
-                      }
-                    }
-                  }else{
-                    echo "['Narasumber','Total Jumlah Narasumber'],";
-                    for($i=0;$i<$jml_grafik;$i++){
-
-                      echo "['".$nama_narasumber[$i]."',".$jml_narasumber[$i]."]";
-                      if($i<$jml_grafik-1){
-                        echo ",";
-                      }
-                    }
+                  echo "['".$sub_topik_berita[$i]."',".$jml_sub_topik[$i]."]";
+                  if($i<$jml_grafik-1){
+                    echo ",";
                   }
-                 ?>
+                }
+              }
+              else if($tampil!='narasumber'){
+                echo "['','Total Jumlah'],";
+                for($i=0;$i<$jml_grafik;$i++){
 
-              ]);
-
-              var options = {
-                title: '<?php echo $judul;?>',
-                width: 900,
-                legend: { position: 'none' },
-                chart: { title: '<?php echo $judul;?>',
-                   subtitle: 'Jumlah Ber' },
-                bars: 'horizontal', // Required for Material Bar Charts.
-                axes: {
-                  x: {
-                    0: { side: 'top', label: 'Jumlah'} // Top x-axis.
+                  echo "['".$tone[$i]."',".$jml_tone[$i]."]";
+                  if($i<$jml_grafik-1){
+                    echo ",";
                   }
-                },
-                bar: { groupWidth: "90%" }
-              };
-              // var row = new google.visualization.arrayToDataTable(data.getSortedRows(1));
+                }
+              }else{
+                echo "['Narasumber','Total Jumlah Narasumber'],";
+                for($i=0;$i<$jml_grafik;$i++){
 
-              // var row = data.getSortedRows(1);
-              // var rowInds = data.getSortedRows([{column: 2}]);
-              // for (var i = 0; i < rowInds.length; i++) {
-              //   var v = data.getValue(rowInds[i], 2);
-              // }
-              data.sort({column:1,desc:true});
-              var chart = new google.charts.Bar(document.getElementById('piechart'));
+                  echo "['".$nama_narasumber[$i]."',".$jml_narasumber[$i]."]";
+                  if($i<$jml_grafik-1){
+                    echo ",";
+                  }
+                }
+              }
+              ?>
 
-              chart.draw(data, options);
-            }
+            ]);
+
+            var options = {
+              title: '<?php echo $judul;?>',
+              width: 900,
+              legend: { position: 'none' },
+              chart: { title: '<?php echo $judul;?>',
+              subtitle: 'Jumlah Ber' },
+              bars: 'horizontal', // Required for Material Bar Charts.
+              axes: {
+                x: {
+                  0: { side: 'top', label: 'Jumlah'} // Top x-axis.
+                }
+              },
+              bar: { groupWidth: "90%" }
+            };
+            // var row = new google.visualization.arrayToDataTable(data.getSortedRows(1));
+
+            // var row = data.getSortedRows(1);
+            // var rowInds = data.getSortedRows([{column: 2}]);
+            // for (var i = 0; i < rowInds.length; i++) {
+            //   var v = data.getValue(rowInds[i], 2);
+            // }
+            data.sort({column:1,desc:true});
+            var chart = new google.charts.Bar(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+          }
           </script>
           Jika ingin melihat secara kronologi klik tombol di bawah ini
           <form action='<?php echo site_url('Grafik/grafik_kronologi');?>' id='grafik_kronologi'>
@@ -263,51 +263,51 @@
                   <div class="timepicker"><input id="datepicker" type="text" placeholder="Tanggal Mulai" class="form-control ui-timepicker-input" autocomplete="off" name="tgl_awal" required></div>
                   <div class="timepicker"><input id="datepicker2" type="text" placeholder="Tanggal Akhir" class="form-control ui-timepicker-input" autocomplete="off" name="tgl_akhir" required></div>
                 </div>
-            </div>
-            <div class="col-sm-6">
-              <select id="select1" name="tone" class="form-control select2-hidden-accessible" style="width: 40%" data-placeholder="Tone" tabindex="-1" aria-hidden="true" required>
-                <option value=""></option>
-                <option value="tone_berita">Tone Berita</option>
-                <!-- <option value="tone_judul">Tone Judul</option> -->
-                <option value="tone_kutipan">Tone Kutipan</option>
-                <option value="media">Media</option>
-                <option value="narasumber">Narasumber</option>
-                <option value="narasumber_int">Narasumber Internal</option>
-                <option value="narasumber_eks">Narasumber Eksternal</option>
-                <option value="topik">Topik Berita</option>
-                
-              </select>
-              <button class="btn btn-primary" form="form_cari">Submit</button>
-              <br>
-              <div class="btn-group mr5">
-                <?php
+              </div>
+              <div class="col-sm-6">
+                <select id="select1" name="tone" class="form-control select2-hidden-accessible" style="width: 40%" data-placeholder="Tone" tabindex="-1" aria-hidden="true" required>
+                  <option value=""></option>
+                  <option value="tone_berita">Tone Berita</option>
+                  <!-- <option value="tone_judul">Tone Judul</option> -->
+                  <option value="tone_kutipan">Tone Kutipan</option>
+                  <option value="media">Media</option>
+                  <option value="narasumber">Narasumber</option>
+                  <option value="narasumber_int">Narasumber Internal</option>
+                  <option value="narasumber_eks">Narasumber Eksternal</option>
+                  <option value="topik">Topik Berita</option>
+
+                </select>
+                <button class="btn btn-primary" form="form_cari">Submit</button>
+                <br>
+                <div class="btn-group mr5">
+                  <?php
 
 
-                // if($_GET == NULL){
-                //
-                //   if($_SESSION['graph']==NULL){
-                //     $_SESSION['graph'] = 'pie';
-                //   }
-                // }else{
-                //   $_SESSION['graph'] = $_GET['graph'];
-                // }
-                //
-                // if($_SESSION['graph'] == 'bar'){
-                //   echo "<a href='?graph=bar'><button type='button' class='btn btn-default active' disabled>Bar Chart</button></a>";
-                //   echo "<a href='?graph=pie'><button type='button' class='btn btn-default'>Pie Chart</button></a>";
-                //
-                // }else if($_SESSION['graph'] == 'pie'){
-                //   echo "<a href='?graph=bar'><button type='button' class='btn btn-default'>Bar Chart</button></a>";
-                //   echo "<a href='?graph=pie'><button type='button' class='btn btn-default active' disabled>Pie Chart</button></a>";
-                //
-                // }
+                  // if($_GET == NULL){
+                  //
+                  //   if($_SESSION['graph']==NULL){
+                  //     $_SESSION['graph'] = 'pie';
+                  //   }
+                  // }else{
+                  //   $_SESSION['graph'] = $_GET['graph'];
+                  // }
+                  //
+                  // if($_SESSION['graph'] == 'bar'){
+                  //   echo "<a href='?graph=bar'><button type='button' class='btn btn-default active' disabled>Bar Chart</button></a>";
+                  //   echo "<a href='?graph=pie'><button type='button' class='btn btn-default'>Pie Chart</button></a>";
+                  //
+                  // }else if($_SESSION['graph'] == 'pie'){
+                  //   echo "<a href='?graph=bar'><button type='button' class='btn btn-default'>Bar Chart</button></a>";
+                  //   echo "<a href='?graph=pie'><button type='button' class='btn btn-default active' disabled>Pie Chart</button></a>";
+                  //
+                  // }
 
-                ?>
+                  ?>
+
+                </div>
 
               </div>
-
             </div>
-          </div>
           </form>
           <br>
           <div id="piechart" style="width: 100%; height: 500px;"></div>

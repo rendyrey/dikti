@@ -60,7 +60,7 @@ class M_berita extends CI_Model {
 		$this->db->where('id_isi_berita',$id_isi_berita);
 		$this->db->update('isi_berita');
 	}
-	
+
 	function update_tone_judul($id_isi_berita,$tone){
 		$this->db->set('tone_judul',$tone);
 		$this->db->where('id_isi_berita',$id_isi_berita);
@@ -89,37 +89,37 @@ class M_berita extends CI_Model {
 
 	function update_isi_berita($id_isi_berita,$data){
 		$set = array(
-						'id_berita'=>$data['id_berita'],
-						'id_sub_topik'=>$data['id_sub_topik'],
-						'id_media'=>$data['id_media'],
-						'id_narasumber'=>$data['id_narasumber'],
-						'id_narasumber2'=>$data['id_narasumber2'],
-						'id_narasumber3'=>$data['id_narasumber3'],
-						'id_narasumber4'=>$data['id_narasumber4'],
-						'judul'=>$data['judul'],
-						'isi_berita'=>$data['isi_berita'],
-						'tgl_berita'=>$data['tgl_berita'],
-						'kutipan'=>$data['kutipan'],
-						'tone_judul'=>$data['tone_judul'],
-						'tone_berita'=>$data['tone_berita'],
-						'tone_kutipan'=>$data['tone_kutipan'],
-						'ad_value'=>$data['ad_value'],
-						'news_value'=>$data['news_value'],
-						'link_berita'=>$data['link_berita']);
+			'id_berita'=>$data['id_berita'],
+			'id_sub_topik'=>$data['id_sub_topik'],
+			'id_media'=>$data['id_media'],
+			'id_narasumber'=>$data['id_narasumber'],
+			'id_narasumber2'=>$data['id_narasumber2'],
+			'id_narasumber3'=>$data['id_narasumber3'],
+			'id_narasumber4'=>$data['id_narasumber4'],
+			'judul'=>$data['judul'],
+			'isi_berita'=>$data['isi_berita'],
+			'tgl_berita'=>$data['tgl_berita'],
+			'kutipan'=>$data['kutipan'],
+			'tone_judul'=>$data['tone_judul'],
+			'tone_berita'=>$data['tone_berita'],
+			'tone_kutipan'=>$data['tone_kutipan'],
+			'ad_value'=>$data['ad_value'],
+			'news_value'=>$data['news_value'],
+			'link_berita'=>$data['link_berita']);
 
-		$this->db->set($set);
-		$this->db->where('id_isi_berita',$id_isi_berita);
-		$this->db->update('isi_berita');
-	}
+			$this->db->set($set);
+			$this->db->where('id_isi_berita',$id_isi_berita);
+			$this->db->update('isi_berita');
+		}
 
 
 
-	//untuk mendapatkan semua:
-	function get_all($id_isi_berita){
-		$this->db->select('*,isi_berita.id_berita as kd_berita,
-											isi_berita.id_sub_topik as kd_sub_topik,
-											isi_berita.id_media as kd_media'
-											);
+		//untuk mendapatkan semua:
+		function get_all($id_isi_berita){
+			$this->db->select('*,isi_berita.id_berita as kd_berita,
+			isi_berita.id_sub_topik as kd_sub_topik,
+			isi_berita.id_media as kd_media'
+		);
 		$this->db->where('isi_berita.id_berita = topik_berita.id_berita');
 		$this->db->where('isi_berita.id_media = media.id_media');
 		$this->db->where('isi_berita.id_sub_topik = sub_topik_berita.id_sub_topik');

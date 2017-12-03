@@ -53,43 +53,43 @@
       <div class="or"> Please Enter Your Information </div>
       <!-- <form action="index.html"> -->
       <?php echo form_open($action);?>
-        <div class="form-group mb10">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input type="text" name="username" class="form-control" placeholder="Enter Username" value="<?php echo set_value('username');?>">
-          </div>
-          <?php echo form_error('username'); ?>
+      <div class="form-group mb10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" name="username" class="form-control" placeholder="Enter Username" value="<?php echo set_value('username');?>">
         </div>
-        <div class="form-group nomargin">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input type="password" name="password" class="form-control" placeholder="Enter Password" value="<?php echo set_value('password');?>">
-          </div>
-          <?php echo form_error('password'); ?>
+        <?php echo form_error('username'); ?>
+      </div>
+      <div class="form-group nomargin">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" name="password" class="form-control" placeholder="Enter Password" value="<?php echo set_value('password');?>">
+        </div>
+        <?php echo form_error('password'); ?>
 
-        </div>
-        <!-- <div><a href="" class="forgot">Forgot password?</a></div> -->
-        <br>
-        <?php echo "<font color=red>$message</font><br>";?>
-        <div class="form-group">
-          <!-- <button class="btn btn-success btn-quirk btn-block"> -->
-            <?php
-              $myButton = array(
-                'class' => 'btn btn-success btn-quirk btn-block',
-                'name' => 'submit',
-                'value' => 'Login'
-              );
-            ?>
-            <?php echo form_submit($myButton);?>
-          <!-- </button> -->
-        </div>
+      </div>
+      <!-- <div><a href="" class="forgot">Forgot password?</a></div> -->
+      <br>
+      <?php echo "<font color=red>$message</font><br>";?>
+      <div class="form-group">
+        <!-- <button class="btn btn-success btn-quirk btn-block"> -->
+        <?php
+        $myButton = array(
+          'class' => 'btn btn-success btn-quirk btn-block',
+          'name' => 'submit',
+          'value' => 'Login'
+        );
+        ?>
+        <?php echo form_submit($myButton);?>
+        <!-- </button> -->
+      </div>
 
       <hr class="invisible">
       <!-- <div class="form-group">
-        <a href="signup.html" class="btn btn-default btn-quirk btn-stroke btn-stroke-thin btn-block btn-sign">Not a member? Sign up now!</a>
-      </div> -->
-    </div>
-  </div><!-- panel -->
+      <a href="signup.html" class="btn btn-default btn-quirk btn-stroke btn-stroke-thin btn-block btn-sign">Not a member? Sign up now!</a>
+    </div> -->
+  </div>
+</div><!-- panel -->
 
 </body>
 </html>

@@ -11,70 +11,70 @@ class M_grafik extends CI_Model {
 	}
 
 	function get_count_tone_berita(){
-    $this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_berita) as jml_tone');
-    $this->db->group_by('tone_berita');
+		$this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_berita) as jml_tone');
+		$this->db->group_by('tone_berita');
 		$this->db->order_by('jml_tone', 'desc');
-    return $this->db->get('isi_berita');
-  }
+		return $this->db->get('isi_berita');
+	}
 
-  function get_count_tone_berita_by($tgl_awal,$tgl_akhir){
-    $this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_berita) as jml_tone');
-    $this->db->where('tgl_berita >=', $tgl_awal);
-    $this->db->where('tgl_berita <=', $tgl_akhir);
-    $this->db->group_by('tone_berita');
+	function get_count_tone_berita_by($tgl_awal,$tgl_akhir){
+		$this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_berita) as jml_tone');
+		$this->db->where('tgl_berita >=', $tgl_awal);
+		$this->db->where('tgl_berita <=', $tgl_akhir);
+		$this->db->group_by('tone_berita');
 		$this->db->order_by('jml_tone', 'desc');
-    return $this->db->get('isi_berita');
-  }
+		return $this->db->get('isi_berita');
+	}
 
-  function get_count_tone_judul_by($tgl_awal,$tgl_akhir){
-    $this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_judul) as jml_tone');
-    $this->db->where('tgl_berita >=', $tgl_awal);
-    $this->db->where('tgl_berita <=', $tgl_akhir);
-    $this->db->group_by('tone_judul');
+	function get_count_tone_judul_by($tgl_awal,$tgl_akhir){
+		$this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_judul) as jml_tone');
+		$this->db->where('tgl_berita >=', $tgl_awal);
+		$this->db->where('tgl_berita <=', $tgl_akhir);
+		$this->db->group_by('tone_judul');
 		$this->db->order_by('jml_tone', 'desc');
-    return $this->db->get('isi_berita');
-  }
+		return $this->db->get('isi_berita');
+	}
 
-  function get_count_tone_kutipan_by($tgl_awal,$tgl_akhir){
-    $this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_kutipan) as jml_tone');
-    $this->db->where('tgl_berita >=', $tgl_awal);
-    $this->db->where('tgl_berita <=', $tgl_akhir);
-    $this->db->group_by('tone_kutipan');
+	function get_count_tone_kutipan_by($tgl_awal,$tgl_akhir){
+		$this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(tone_kutipan) as jml_tone');
+		$this->db->where('tgl_berita >=', $tgl_awal);
+		$this->db->where('tgl_berita <=', $tgl_akhir);
+		$this->db->group_by('tone_kutipan');
 		$this->db->order_by('jml_tone', 'desc');
-    return $this->db->get('isi_berita');
-  }
+		return $this->db->get('isi_berita');
+	}
 
-  function get_count_media_by($tgl_awal,$tgl_akhir){
-    $this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(id_media) as jml_media');
-    $this->db->where('tgl_berita >=', $tgl_awal);
-    $this->db->where('tgl_berita <=', $tgl_akhir);
-    $this->db->group_by('id_media');
+	function get_count_media_by($tgl_awal,$tgl_akhir){
+		$this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,count(id_media) as jml_media');
+		$this->db->where('tgl_berita >=', $tgl_awal);
+		$this->db->where('tgl_berita <=', $tgl_akhir);
+		$this->db->group_by('id_media');
 		$this->db->order_by('jml_media', 'desc');
-    return $this->db->get('isi_berita');
-  }
+		return $this->db->get('isi_berita');
+	}
 
 
 
 	////bagian untuk kronologi grafik
 
 	function grafik_kronologi_berita($tgl_awal,$tgl_akhir){
-    $this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,LEFT(tgl_post,10) as tgl,count(tone_berita) as jml_tone');
-    $this->db->where('tgl_berita >=', $tgl_awal);
-    $this->db->where('tgl_berita <=', $tgl_akhir);
-    $this->db->group_by('tone_berita');
+		$this->db->select('id_isi_berita,id_media,tone_berita,tone_judul,tone_kutipan,LEFT(tgl_post,10) as tgl,count(tone_berita) as jml_tone');
+		$this->db->where('tgl_berita >=', $tgl_awal);
+		$this->db->where('tgl_berita <=', $tgl_akhir);
+		$this->db->group_by('tone_berita');
 		$this->db->group_by('tgl_berita');
-    return $this->db->get('isi_berita');
-  }
+		return $this->db->get('isi_berita');
+	}
 
 
 
 
 
-  //bagian untuk mendapatkan semua tanggal
-  function get_jml_tanggal($tgl_awal,$tgl_akhir){
+	//bagian untuk mendapatkan semua tanggal
+	function get_jml_tanggal($tgl_awal,$tgl_akhir){
 		$this->db->select('tgl_berita as tgl');
 		$this->db->where('tgl_berita >=', $tgl_awal);
-    $this->db->where('tgl_berita <=', $tgl_akhir);
+		$this->db->where('tgl_berita <=', $tgl_akhir);
 		$this->db->group_by('tgl_berita');
 		return $this->db->get('isi_berita');
 	}

@@ -2,107 +2,107 @@
 <html lang="en">
 <head>
 
-<style>
-@font-face {
-font-family: Roboto;
-src: url('<?php echo base_url();?>assets/Roboto-Regular.ttf');
-}
+  <style>
+  @font-face {
+    font-family: Roboto;
+    src: url('<?php echo base_url();?>assets/Roboto-Regular.ttf');
+  }
 
-html {
-font-family: Roboto !important;
-}
+  html {
+    font-family: Roboto !important;
+  }
 
-body{
-font-family: Roboto !important;
-}
-
-div{
-font-family: Roboto !important;
-}
+  body{
+    font-family: Roboto !important;
+  }
+  
+  div{
+    font-family: Roboto !important;
+  }
 </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!--<link rel="shortcut icon" href="../images/favicon.png" type="image/png">-->
 
-  <title>Kemenristek Dikti - Media Monitoring</title>
-  <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/ristek_dikti_logo.ico" type="image/x-icon">
+<title>Kemenristek Dikti - Media Monitoring</title>
+<link rel="shortcut icon" href="<?php echo base_url();?>assets/images/ristek_dikti_logo.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/Hover/hover.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/fontawesome/css/font-awesome.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/weather-icons/css/weather-icons.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/ionicons/css/ionicons.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/jquery-toggles/toggles-full.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/morrisjs/morris.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/Hover/hover.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/weather-icons/css/weather-icons.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/ionicons/css/ionicons.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/jquery-toggles/toggles-full.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/morrisjs/morris.css">
 
 
-  <!-- untuk form -->
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/select2/select2.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/dropzone/dropzone.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/timepicker/jquery.timepicker.css">
+<!-- untuk form -->
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/select2/select2.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/dropzone/dropzone.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/lib/timepicker/jquery.timepicker.css">
 
-  <link rel="stylesheet" href="<?php echo base_url();?>assets/css/quirk.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/quirk.css">
 
-  <script src="<?php echo base_url();?>assets/lib/modernizr/modernizr.js"></script>
+<script src="<?php echo base_url();?>assets/lib/modernizr/modernizr.js"></script>
 
-  <script src="<?php echo base_url();?>assets/lib/jquery-ui/jquery-ui.js"></script>
-  <script src="<?php echo base_url();?>assets/lib/bootstrap/js/bootstrap.js"></script>
-  <script src="<?php echo base_url();?>assets/lib/jquery-toggles/toggles.js"></script>
+<script src="<?php echo base_url();?>assets/lib/jquery-ui/jquery-ui.js"></script>
+<script src="<?php echo base_url();?>assets/lib/bootstrap/js/bootstrap.js"></script>
+<script src="<?php echo base_url();?>assets/lib/jquery-toggles/toggles.js"></script>
 
-  <script src="<?php echo base_url();?>assets/lib/morrisjs/morris.js"></script>
-  <script src="<?php echo base_url();?>assets/lib/raphael/raphael.js"></script>
+<script src="<?php echo base_url();?>assets/lib/morrisjs/morris.js"></script>
+<script src="<?php echo base_url();?>assets/lib/raphael/raphael.js"></script>
 
-  <script src="<?php echo base_url();?>assets/lib/flot/jquery.flot.js"></script>
-  <script src="<?php echo base_url();?>assets/lib/flot/jquery.flot.resize.js"></script>
-  <script src="<?php echo base_url();?>assets/lib/flot-spline/jquery.flot.spline.js"></script>
+<script src="<?php echo base_url();?>assets/lib/flot/jquery.flot.js"></script>
+<script src="<?php echo base_url();?>assets/lib/flot/jquery.flot.resize.js"></script>
+<script src="<?php echo base_url();?>assets/lib/flot-spline/jquery.flot.spline.js"></script>
 
-  <script src="<?php echo base_url();?>assets/lib/jquery-knob/jquery.knob.js"></script>
+<script src="<?php echo base_url();?>assets/lib/jquery-knob/jquery.knob.js"></script>
 
-  <script src="<?php echo base_url();?>assets/js/quirk.js"></script>
-  <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
+<script src="<?php echo base_url();?>assets/js/quirk.js"></script>
+<script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
 </head>
 <body>
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css">
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/select2/select2.css">
 
-<header>
-  <div class="headerpanel" style="background-color:#681818">
+  <header>
+    <div class="headerpanel" style="background-color:#681818">
 
-    <div class="logopanel">
-      <h4><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/ristek_dikti_logo.png" height="30" hspace="5">    Media Monitoring</a></h4>
+      <div class="logopanel">
+        <h4><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/images/ristek_dikti_logo.png" height="30" hspace="5">    Media Monitoring</a></h4>
 
-    </div><!-- logopanel -->
+      </div><!-- logopanel -->
 
-    <div class="headerbar">
+      <div class="headerbar">
 
-      <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
 
-      <!-- <div class="searchpanel">
+        <!-- <div class="searchpanel">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-          </span>
-        </div>
-      </div> -->
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </div> -->
 
-      <div class="header-right">
-        <ul class="headermenu">
-          <li>
+  <div class="header-right">
+    <ul class="headermenu">
+      <li>
 
-          </li>
-          <li>
-            <a href="<?php echo site_url('Login/process_logout');?>">
-            <button id="" class="btn">
-              Logout
-              <i class="fa fa-sign-out"></i>
-            </button>
-          </li>
-        </ul>
-      </div><!-- header-right -->
-    </div><!-- headerbar -->
-  </div><!-- header-->
+      </li>
+      <li>
+        <a href="<?php echo site_url('Login/process_logout');?>">
+          <button id="" class="btn">
+            Logout
+            <i class="fa fa-sign-out"></i>
+          </button>
+        </li>
+      </ul>
+    </div><!-- header-right -->
+  </div><!-- headerbar -->
+</div><!-- header-->
 </header>
 
 <section>
@@ -139,25 +139,25 @@ font-family: Roboto !important;
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li class="nav-parent"><a href=""><i class="fa fa-newspaper-o"></i> <span>Berita</span></a>
-                <ul class="children">
-                  <?php
-                  $i=0;
-                    for($i<0;$i<$jml;$i++){
-                      echo "<li ><a href=".site_url('Berita/tabel_berita/').$id_berita[$i]." style='margin-bottom:15px;'>".$topik_berita[$i]."</a></li>";
-                      // echo "<hr>";
-                    }
-                   ?>
-                </ul>
-              </li>
-              <li class="nav-parent active"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
-                <ul class="children">
-                  <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
-                  <li class='active'><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
-                  <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
-                </ul>
-              </li>
+              <ul class="children">
+                <?php
+                $i=0;
+                for($i<0;$i<$jml;$i++){
+                  echo "<li ><a href=".site_url('Berita/tabel_berita/').$id_berita[$i]." style='margin-bottom:15px;'>".$topik_berita[$i]."</a></li>";
+                  // echo "<hr>";
+                }
+                ?>
+              </ul>
+            </li>
+            <li class="nav-parent active"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
+              <ul class="children">
+                <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
+                <li class='active'><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+              </ul>
+            </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
             <li><a href="<?php echo site_url('Trend');?>"><i class="fa fa-list-ol"></i> <span>Trend Berita</span></a></li>
             <li><a href="<?php echo site_url('Grafik');?>"><i class="fa fa-pie-chart"></i> <span>Grafik</span></a></li>
@@ -166,11 +166,11 @@ font-family: Roboto !important;
 
         <!-- ######################## POST MENu ##################### -->
 
-       <div class="tab-pane" id="emailmenu">
-         <div class="sidebar-btn-wrapper">
-           <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>
-         </div>
-       </div><!-- tab-pane -->
+        <div class="tab-pane" id="emailmenu">
+          <div class="sidebar-btn-wrapper">
+            <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>
+          </div>
+        </div><!-- tab-pane -->
 
       </div><!-- tab-content -->
 
@@ -180,30 +180,30 @@ font-family: Roboto !important;
   <div class="mainpanel">
 
     <!--<div class="pageheader">
-      <h2><i class="fa fa-home"></i> Dashboard</h2>
-    </div>-->
+    <h2><i class="fa fa-home"></i> Dashboard</h2>
+  </div>-->
 
-    <div class="contentpanel">
-      <ol class="breadcrumb breadcrumb-quirk">
-        <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home mr5"></i> Home</a></li>
-        <li>Program Media</li>
-        <li class="active">Konferensi Pers</li>
-      </ol>
+  <div class="contentpanel">
+    <ol class="breadcrumb breadcrumb-quirk">
+      <li><a href="<?php echo site_url('Dashboard/index');?>"><i class="fa fa-home mr5"></i> Home</a></li>
+      <li>Program Media</li>
+      <li class="active">Konferensi Pers</li>
+    </ol>
 
-      <div class="panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">Submit Program Media</h4>
-              <p></p>
-            </div>
+    <div class="panel">
+      <div class="panel-heading">
+        <h4 class="panel-title">Submit Program Media</h4>
+        <p></p>
+      </div>
 
 
       <div class="panel-body">
         <form action='' method='post' id='form_program'>
           <div class="form-group">
-                  <input type="text" placeholder="Judul Berita" class="form-control" name='judul_berita' required>
+            <input type="text" placeholder="Judul Berita" class="form-control" name='judul_berita' required>
           </div>
           <div class="form-group">
-                  <input type="text" placeholder="Program" class="form-control" name='program' required>
+            <input type="text" placeholder="Program" class="form-control" name='program' required>
           </div>
           <div class="form-group">
             <select name='tone_berita' class="form-control select_search" style="width: 100%" data-placeholder="Tone Berita">
@@ -225,7 +225,7 @@ font-family: Roboto !important;
       </div>
     </div>
   </div> <!-- contentpanel -->
-  </div><!-- mainpanel -->
+</div><!-- mainpanel -->
 
 </section>
 
@@ -419,33 +419,33 @@ $(function(){
     });
   });
 
-        $('#auto_number1').keyup(function(event) {
+  $('#auto_number1').keyup(function(event) {
 
-        // skip for arrow keys
-        if(event.which >= 37 && event.which <= 40) return;
+    // skip for arrow keys
+    if(event.which >= 37 && event.which <= 40) return;
 
-        // format number
-        $(this).val(function(index, value) {
-          return value
-          .replace(/\D/g, "")
-          .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-          ;
-        });
-      });
-
-      $('#auto_number2').keyup(function(event) {
-
-      // skip for arrow keys
-      if(event.which >= 37 && event.which <= 40) return;
-
-      // format number
-      $(this).val(function(index, value) {
-        return value
-        .replace(/\D/g, "")
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-        ;
-      });
+    // format number
+    $(this).val(function(index, value) {
+      return value
+      .replace(/\D/g, "")
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      ;
     });
+  });
+
+  $('#auto_number2').keyup(function(event) {
+
+    // skip for arrow keys
+    if(event.which >= 37 && event.which <= 40) return;
+
+    // format number
+    $(this).val(function(index, value) {
+      return value
+      .replace(/\D/g, "")
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+      ;
+    });
+  });
 });
 </script>
 
