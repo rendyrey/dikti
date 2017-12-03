@@ -10,6 +10,7 @@ class M_berita extends CI_Model {
 
 	}
 
+
 	function get(){
 		return $this->db->get('topik_berita');
 	}
