@@ -10,32 +10,32 @@ class Berita extends CI_Controller {
     $this->load->model('M_narasumber');
   }
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function get_topik()
-	{
+  /**
+  * Index Page for this controller.
+  *
+  * Maps to the following URL
+  * 		http://example.com/index.php/welcome
+  *	- or -
+  * 		http://example.com/index.php/welcome/index
+  *	- or -
+  * Since this controller is set as the default controller in
+  * config/routes.php, it's displayed at http://example.com/
+  *
+  * So any other public methods not prefixed with an underscore will
+  * map to /index.php/welcome/<method_name>
+  * @see https://codeigniter.com/user_guide/general/urls.html
+  */
+  public function get_topik()
+  {
     $this->load->view('native/get_topik');
   }
 
   public function check_login(){
     if($this->session->userdata('login')!=TRUE && $this->session->userdata('user')!='administrator'){
       $data['message']=$this->session->flashdata('message');
-			$data['action']='Login/process_login_admin';
-			// $this->load->view('templates/script_header');
-			// $this->load->view('index',$data);
+      $data['action']='Login/process_login_admin';
+      // $this->load->view('templates/script_header');
+      // $this->load->view('index',$data);
       // exit;
       redirect('Login');
     }
@@ -131,38 +131,38 @@ class Berita extends CI_Controller {
   }
 
   public function post(){
-      $this->check_login();
-      $query=$this->M_berita->get_isi_berita();
-      $jml = $query->num_rows();
+    $this->check_login();
+    $query=$this->M_berita->get_isi_berita();
+    $jml = $query->num_rows();
 
-      $jml++;
+    $jml++;
 
-      $data['id_berita'] = $_POST['id_berita'];
-      $data['wartawan'] = $_POST['wartawan'];
-      $data['id_sub_topik'] = $_POST['id_sub_topik'];
-      $data['id_media'] = $_POST['id_media'];
-      $data['id_narasumber'] = $_POST['sub_narasumber'];
-      $data['id_narasumber2'] = $_POST['sub_narasumber2'];
-      $data['id_narasumber3'] = $_POST['sub_narasumber3'];
-      $data['id_narasumber4'] = $_POST['sub_narasumber4'];
-      $data['judul'] = $_POST['judul'];
-      $data['isi_berita'] = nl2br($_POST['isi_berita']);
-      $data['tgl_berita'] = $_POST['tgl_berita'];
-      $data['kutipan'] = $this->separate_quote($_POST['isi_berita']);
-      $data['tone_judul'] = $this->calculate_tone($data['judul']);
-      $data['tone_berita'] = $this->calculate_tone($data['isi_berita']);
-      $data['tone_kutipan'] = $this->calculate_tone($data['kutipan']);
-      $ad=str_replace('.','' ,$_POST['ad_value']);
-      $news=str_replace('.','',$_POST['news_value']);
-      $data['ad_value'] = $ad;
-      $data['news_value'] = $news;
-      $data['link_berita'] = $_POST['link_berita'];
+    $data['id_berita'] = $_POST['id_berita'];
+    $data['wartawan'] = $_POST['wartawan'];
+    $data['id_sub_topik'] = $_POST['id_sub_topik'];
+    $data['id_media'] = $_POST['id_media'];
+    $data['id_narasumber'] = $_POST['sub_narasumber'];
+    $data['id_narasumber2'] = $_POST['sub_narasumber2'];
+    $data['id_narasumber3'] = $_POST['sub_narasumber3'];
+    $data['id_narasumber4'] = $_POST['sub_narasumber4'];
+    $data['judul'] = $_POST['judul'];
+    $data['isi_berita'] = nl2br($_POST['isi_berita']);
+    $data['tgl_berita'] = $_POST['tgl_berita'];
+    $data['kutipan'] = $this->separate_quote($_POST['isi_berita']);
+    $data['tone_judul'] = $this->calculate_tone($data['judul']);
+    $data['tone_berita'] = $this->calculate_tone($data['isi_berita']);
+    $data['tone_kutipan'] = $this->calculate_tone($data['kutipan']);
+    $ad=str_replace('.','' ,$_POST['ad_value']);
+    $news=str_replace('.','',$_POST['news_value']);
+    $data['ad_value'] = $ad;
+    $data['news_value'] = $news;
+    $data['link_berita'] = $_POST['link_berita'];
 
-      $this->M_berita->insert_isi_berita($data);
-      $this->session->set_flashdata('message','Post Berita Berhasil!');
-      redirect('Dashboard/post');
+    $this->M_berita->insert_isi_berita($data);
+    $this->session->set_flashdata('message','Post Berita Berhasil!');
+    redirect('Dashboard/post');
 
-    }
+  }
 
   public function hapus($id_isi_berita,$id_berita){
     $this->check_login();
@@ -263,38 +263,38 @@ class Berita extends CI_Controller {
   }
 
   public function edit_berita($id_isi_berita){
-  	 $this->check_login();
-      $query=$this->M_berita->get_isi_berita();
-      $jml = $query->num_rows();
+    $this->check_login();
+    $query=$this->M_berita->get_isi_berita();
+    $jml = $query->num_rows();
 
 
 
-      $data['id_berita'] = $_POST['id_berita'];
-      $data['id_sub_topik'] = $_POST['id_sub_topik'];
-      $data['id_media'] = $_POST['id_media'];
-      $data['id_narasumber'] = $_POST['sub_narasumber'];
-      $data['id_narasumber2'] = $_POST['sub_narasumber2'];
-      $data['id_narasumber3'] = $_POST['sub_narasumber3'];
-      $data['id_narasumber4'] = $_POST['sub_narasumber4'];
-      $data['judul'] = $_POST['judul'];
-      $data['isi_berita'] = nl2br($_POST['isi_berita']);
-      $data['tgl_berita'] = $_POST['tgl_berita'];
-      $data['kutipan'] = $this->separate_quote($_POST['isi_berita']);
-      $data['tone_judul'] = $this->calculate_tone($data['judul']);
-      $data['tone_berita'] = $this->calculate_tone($data['isi_berita']);
-      $data['tone_kutipan'] = $this->calculate_tone($data['kutipan']);
-      $ad=str_replace('.','' ,$_POST['ad_value']);
-      $news=str_replace('.','',$_POST['news_value']);
-      $data['ad_value'] = $ad;
-      $data['news_value'] = $news;
-      $data['link_berita'] = $_POST['link_berita'];
+    $data['id_berita'] = $_POST['id_berita'];
+    $data['id_sub_topik'] = $_POST['id_sub_topik'];
+    $data['id_media'] = $_POST['id_media'];
+    $data['id_narasumber'] = $_POST['sub_narasumber'];
+    $data['id_narasumber2'] = $_POST['sub_narasumber2'];
+    $data['id_narasumber3'] = $_POST['sub_narasumber3'];
+    $data['id_narasumber4'] = $_POST['sub_narasumber4'];
+    $data['judul'] = $_POST['judul'];
+    $data['isi_berita'] = nl2br($_POST['isi_berita']);
+    $data['tgl_berita'] = $_POST['tgl_berita'];
+    $data['kutipan'] = $this->separate_quote($_POST['isi_berita']);
+    $data['tone_judul'] = $this->calculate_tone($data['judul']);
+    $data['tone_berita'] = $this->calculate_tone($data['isi_berita']);
+    $data['tone_kutipan'] = $this->calculate_tone($data['kutipan']);
+    $ad=str_replace('.','' ,$_POST['ad_value']);
+    $news=str_replace('.','',$_POST['news_value']);
+    $data['ad_value'] = $ad;
+    $data['news_value'] = $news;
+    $data['link_berita'] = $_POST['link_berita'];
 
-      $id_berita = $data['id_berita'];
-      $this->M_berita->update_isi_berita($id_isi_berita,$data);
+    $id_berita = $data['id_berita'];
+    $this->M_berita->update_isi_berita($id_isi_berita,$data);
 
-      $this->session->set_flashdata('message','Post Berita Berhasil!');
-      header("location:http://lensadata.id/index.php/Berita/tabel_berita/$id_berita");
-      // redirect('Berita/tabel_berita/');
+    $this->session->set_flashdata('message','Post Berita Berhasil!');
+    header("location:http://lensadata.id/index.php/Berita/tabel_berita/$id_berita");
+    // redirect('Berita/tabel_berita/');
 
   }
 
