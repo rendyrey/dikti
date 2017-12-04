@@ -19,6 +19,7 @@
     font-family: Roboto !important;
   }
 </style>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="description" content="">
@@ -98,11 +99,17 @@
           </blockquote>
         </p>
       </div>
+      <center><button onclick="myFunction()">Print this page</button></center>
     </div><!-- panel -->
 
   </div><!-- contentpanel -->
 
 
+  <script>
+  function myFunction() {
+      window.print();
+  }
+  </script>
 
 </section>
 

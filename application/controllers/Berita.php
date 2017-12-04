@@ -368,4 +368,12 @@ class Berita extends CI_Controller {
     }
   }
 
+  public function export_pdf(){
+
+      $this->load->view('html2pdf.php');
+      // require_once('wkhtmltopdf/wkhtmltopdf.php');     // Ensure this path is correct !
+
+
+  }
+
 }

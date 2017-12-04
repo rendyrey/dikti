@@ -38,7 +38,7 @@ class M_berita extends CI_Model {
 	function get_isi_berita_where($param,$tgl_skrg=null){
 		$this->db->select("*");
 		$this->db->where('id_berita',$param);
-		if($tgl_skrg!=null) $this->db->where('tgL_berita',$tgl_skrg);
+		if($tgl_skrg!=null) $this->db->where('tgl_berita',$tgl_skrg);
 		return $this->db->get('isi_berita');
 	}
 

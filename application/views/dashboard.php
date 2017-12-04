@@ -158,7 +158,7 @@ ade<!DOCTYPE html>
                 <li><a class="panel-remove"><i class="fa fa-remove"></i></a></li>
               </ul>
               <div class="panel-heading">
-                <h4 class="panel-title">Feed News</h4>
+                <h4 class="panel-title">Berita Hari Ini</h4>
               </div>
               <div class="panel-body">
                 <h2><br>
@@ -246,8 +246,8 @@ ade<!DOCTYPE html>
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
-                        <h4 class="panel-title text-warning">Products Rejected</h4>
-                        <h3>39.9%</h3>
+                        <h4 class="panel-title text-warning">Negatif</h4>
+                        <h3><?=$jml_negatif;?></h3>
                         <div class="progress">
                           <div style="width: 39.9%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="39.9" role="progressbar" class="progress-bar progress-bar-warning">
                             <span class="sr-only">39.9% Complete (success)</span>
@@ -268,8 +268,8 @@ ade<!DOCTYPE html>
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
-                        <h4 class="panel-title text-success">Products Sold</h4>
-                        <h3>55.4%</h3>
+                        <h4 class="panel-title text-success">Positif</h4>
+                        <h3><?=$jml_positif;?></h3>
                         <div class="progress">
                           <div style="width: 55.4%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="55.4" role="progressbar" class="progress-bar progress-bar-info">
                             <span class="sr-only">55.4% Complete (success)</span>

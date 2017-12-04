@@ -37,10 +37,12 @@ class Dashboard extends CI_Controller {
 				$data['topik_berita'][$i]= $row->topik_berita;
 				$i++;
 			}
-			$berita_netral = $this->M_dashboard->get_netral();
+			$berita_netral = $this->M_dashboard->get_netral_today();
 			$data['jml_netral'] = $berita_netral->num_rows();
-			$berita_negatif = $this->M_dashboard->get_negatif():
+			$berita_negatif = $this->M_dashboard->get_negatif_today();
 			$data['jml_negatif'] = $berita_negatif->num_rows();
+			$berita_positif = $this->M_dashboard->get_positif_today();
+			$data['jml_positif'] = $berita_positif->num_rows();
 			$this->load->view('dashboard',$data);
 		}else{
 			$data['message']=$this->session->flashdata('message');

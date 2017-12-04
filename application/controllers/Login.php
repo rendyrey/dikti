@@ -21,7 +21,8 @@ class Login extends CI_Controller {
 				$data['topik_berita'][$i]= $row->topik_berita;
 				$i++;
 			}
-			$this->load->view('dashboard',$data);
+			redirect('Dashboard/index');
+			// $this->load->view('dashboard',$data);
 		}else{
 			$data['message']=$this->session->flashdata('message');
 			$data['action']='Login/process_login_admin';
