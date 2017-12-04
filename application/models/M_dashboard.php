@@ -19,7 +19,7 @@ class M_dashboard extends CI_Model{
   }
 
   function get_negatif(){
-    $this->db->where('tone_berita','0');
+    $this->db->where('tone_berita','-1');
     return $this->db->get('isi_berita');
   }
 
