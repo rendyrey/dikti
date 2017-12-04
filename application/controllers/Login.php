@@ -7,6 +7,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_login');
 		$this->load->model('M_berita');
+		// $this->load->library('../controllers/Dashboard.php');
 	}
 
 	public function index()
@@ -62,7 +63,9 @@ class Login extends CI_Controller {
 					$data['topik_berita'][$i]= $row->topik_berita;
 					$i++;
 				}
-				$this->load->view('dashboard',$data);
+				redirect('Dashboard/index');
+				// $this->Dashboard->index();
+				// $this->load->view('dashboard',$data);
 			}else{
 				$data['message']=$this->session->set_flashdata('message','Maaf, username atau password anda salah');
 				redirect('Login');

@@ -10,7 +10,8 @@ class M_dashboard extends CI_Model{
   }
 
   function get_netral(){
-    $this->db->where('Field', $Value);
+    $this->db->where('tone_berita','0');
+    return $this->db->get('isi_berita');
   }
 
   function get_positif(){

@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->model('M_berita');
 		$this->load->model('M_narasumber');
+		$this->load->model('M_dashboard');
 	}
 	/**
 	* Index Page for this controller.
@@ -36,6 +37,9 @@ class Dashboard extends CI_Controller {
 				$data['topik_berita'][$i]= $row->topik_berita;
 				$i++;
 			}
+			$berita_netral = $this->M_dashboard->get_netral();
+			$data['jml_netral'] = $berita_netral->num_rows();
+			$data['hi'] =100;
 			$this->load->view('dashboard',$data);
 		}else{
 			$data['message']=$this->session->flashdata('message');
