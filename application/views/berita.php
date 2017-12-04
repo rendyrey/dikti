@@ -310,6 +310,13 @@
                 echo "<i class='fa fa-camera'></i> ".$wartawan[$i]."<br>";
                 echo "<a href='".site_url('Berita/hapus/').$id_isi_berita[$i]."/".$id_berita[$i]."' class='confirmation'><i class='fa fa-close'>&nbsp;Hapus Berita</i></a><br>";
                 echo "<a href='".site_url('Berita/edit/').$id_isi_berita[$i]."/".$id_berita[$i]."'><i class='fa fa-pencil-square-o'>&nbsp;&nbsp;Edit Berita</i></a>";
+                ?>
+                <a href="<?php echo site_url('Berita/detail/').$id_isi_berita[$i];?>"
+                  target="popup"
+                  onclick="window.open('<?php echo site_url('Berita/detail2/').$id_isi_berita[$i];?>','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+                  PDF File
+                </a>
+                <?php
                 echo "</td>";
                 echo "</tr>";
                 $j++;

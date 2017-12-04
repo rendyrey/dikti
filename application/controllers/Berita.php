@@ -130,6 +130,31 @@ class Berita extends CI_Controller {
     $this->load->view('detail_berita', $data);
   }
 
+  public function detail2($id_isi_berita){
+    $query = $this->M_berita->get_detail_berita($id_isi_berita);
+    foreach($query->result() as $rows){
+      $id_topik = $rows->id_berita;
+      $query2 = $this->M_berita->get_sub_topik($id_topik);
+      $row2 = $query2->row();
+      $data['nama_sub_topik'] = $row2->nama_sub_topik;
+      $data['isi_berita'] = $rows->isi_berita;
+      $data['kutipan'] = $rows->kutipan;
+      $data['judul'] = $rows->judul;
+      $data['tone_berita'] = $rows->tone_berita;
+      $data['tone_judul'] = $rows->tone_judul;
+      $data['tone_kutipan'] = $rows->tone_kutipan;
+      $data['link_berita'] = $rows->link_berita;
+      $data['ad_value'] = $rows->ad_value;
+      $data['news_value'] = $rows->news_value;
+      $date_post = strtotime($rows->tgl_berita);
+      $data['tgl_berita'] = date('D, dS F Y',$date_post);
+      $query2 = $this->M_berita->get_media_where($rows->id_media);
+      $row2 = $query2->row();
+      $data['nama_media'] = $row2->nama_media;
+    }
+    $this->load->view('detail_berita2', $data);
+  }
+
   public function post(){
     $this->check_login();
     $query=$this->M_berita->get_isi_berita();
@@ -169,6 +194,8 @@ class Berita extends CI_Controller {
     $query=$this->M_berita->delete_isi_berita($id_isi_berita);
     redirect('Berita/tabel_berita/'.$id_berita);
   }
+
+
 
   public function edit($id_isi_berita,$id_berita){
     $this->check_login();

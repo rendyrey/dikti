@@ -244,12 +244,23 @@
             // for (var i = 0; i < rowInds.length; i++) {
             //   var v = data.getValue(rowInds[i], 2);
             // }
+
+
+
             data.sort({column:1,desc:true});
             var chart = new google.charts.Bar(document.getElementById('piechart'));
+            // var chart_div = document.getElementById('piechart');
 
             chart.draw(data, options);
+            // document.getElementById('png').innerHTML = '<a href="' + chart.getImageURI() + '">Printable version</a>';
           }
+
+
+
           </script>
+
+
+
           Jika ingin melihat secara kronologi klik tombol di bawah ini
           <form action='<?php echo site_url('Grafik/grafik_kronologi');?>' id='grafik_kronologi'>
             <button class="btn btn-info" form='grafik_kronologi'>Grafik Secara Kronologi</button>

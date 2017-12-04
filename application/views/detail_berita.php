@@ -33,7 +33,7 @@
 <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/jquery-toggles/toggles-full.css">
 
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/quirk.css">
-
+<script src="<?php echo base_url();?>assets/canvas/html2canvas.js>"></script>
 <script src="<?php echo base_url();?>assets/lib/modernizr/modernizr.js"></script>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -110,7 +110,7 @@
       window.print();
   }
   </script>
-
+<button>Get Image</button>
 </section>
 
 
