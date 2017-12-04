@@ -225,7 +225,7 @@ ade<!DOCTYPE html>
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
                         <h4 class="panel-title text-success">Netral</h4>
-                        <h3><?=$hi;?></h3>
+                        <h3><?=$jml_netral;?></h3>
                         <div class="progress">
                           <div style="width: 75.7%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75.7" role="progressbar" class="progress-bar progress-bar-success">
                             <span class="sr-only">75.7% Complete (success)</span>

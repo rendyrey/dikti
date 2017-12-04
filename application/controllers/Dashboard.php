@@ -39,7 +39,8 @@ class Dashboard extends CI_Controller {
 			}
 			$berita_netral = $this->M_dashboard->get_netral();
 			$data['jml_netral'] = $berita_netral->num_rows();
-			$data['hi'] =100;
+			$berita_negatif = $this->M_dashboard->get_negatif():
+			$data['jml_negatif'] = $berita_negatif->num_rows();
 			$this->load->view('dashboard',$data);
 		}else{
 			$data['message']=$this->session->flashdata('message');
