@@ -220,21 +220,27 @@ ade<!DOCTYPE html>
 
             <div class="row panel-statistics">
               <div class="col-sm-6">
-                <div class="panel panel-updates">
+                <div class="panel panel-success-full panel-updates">
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
-                        <h4 class="panel-title text-success">Netral</h4>
-                        <h3><?=$jml_netral;?></h3>
+                        <h4 class="panel-title text-success">Positif</h4>
+                        <h3><?=$jml_positif;?></h3>
                         <div class="progress">
-                          <div style="width: 75.7%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75.7" role="progressbar" class="progress-bar progress-bar-success">
-                            <span class="sr-only">75.7% Complete (success)</span>
+                          <div style="width:<?=$persen_pos;?>%" role="progressbar" class="progress-bar progress-bar-success">
+                            <!-- <span class="sr-only">75.7% Complete (success)</span> -->
                           </div>
                         </div>
-                        <p>Added products for this month: 75</p>
+                        <p>Berita Positif hari ini</p>
                       </div>
-                      <div class="col-xs-5 col-lg-4 text-right">
-                        <input type="text" value="75" class="dial-success">
+                      <div class=" col-sm-4">
+                        <div class="pull-left">
+                          <div class="icon icon ion-stats-bars"></div>
+                        </div>
+                        <div class="pull-left">
+                          <h4 class="panel-title">&nbsp;&nbsp;Persentase</h4>
+                          <h3><?=$persen_pos;?>%</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -246,17 +252,23 @@ ade<!DOCTYPE html>
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
-                        <h4 class="panel-title text-warning">Negatif</h4>
+                        <h4 class="panel-title text-success">Negatif</h4>
                         <h3><?=$jml_negatif;?></h3>
                         <div class="progress">
-                          <div style="width: 39.9%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="39.9" role="progressbar" class="progress-bar progress-bar-warning">
-                            <span class="sr-only">39.9% Complete (success)</span>
+                          <div style="width:<?=$persen_neg;?>%"  role="progressbar" class="progress-bar progress-bar-success">
+                            <!-- <span class="sr-only">75.7% Complete (success)</span> -->
                           </div>
                         </div>
-                        <p>Rejected products for this month: 45</p>
+                        <p>Berita Negatif hari ini</p>
                       </div>
-                      <div class="col-xs-5 col-lg-4 text-right">
-                        <input type="text" value="45" class="dial-warning">
+                      <div class=" col-sm-4">
+                        <div class="pull-left">
+                          <div class="icon icon ion-stats-bars"></div>
+                        </div>
+                        <div class="pull-left">
+                          <h4 class="panel-title">&nbsp;&nbsp;Persentase</h4>
+                          <h3><?=$persen_neg;?>%</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -264,50 +276,51 @@ ade<!DOCTYPE html>
               </div><!-- col-sm-6 -->
 
               <div class="col-sm-6">
-                <div class="panel panel-success-full panel-updates">
+                <div class="panel panel-warning-full panel-updates">
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
-                        <h4 class="panel-title text-success">Positif</h4>
-                        <h3><?=$jml_positif;?></h3>
+                        <h4 class="panel-title text-success">Netral</h4>
+                        <h3><?=$jml_netral;?></h3>
                         <div class="progress">
-                          <div style="width: 55.4%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="55.4" role="progressbar" class="progress-bar progress-bar-info">
-                            <span class="sr-only">55.4% Complete (success)</span>
+                          <div style="width:<?=$persen_net;?>%" role="progressbar" class="progress-bar progress-bar-success">
+                            <!-- <span class="sr-only">75.7% Complete (success)</span> -->
                           </div>
                         </div>
-                        <p>Sold products for this month: 1,203</p>
+                        <p>Berita Netral hari ini</p>
                       </div>
-                      <div class="col-xs-5 col-lg-4 text-right">
-                        <input type="text" value="55" class="dial-info">
+                      <div class=" col-sm-4">
+                        <div class="pull-left">
+                          <div class="icon icon ion-stats-bars"></div>
+                        </div>
+                        <div class="pull-left">
+                          <h4 class="panel-title">&nbsp;&nbsp;Persentase</h4>
+                          <h3><?=$persen_net;?>%</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- panel -->
               </div><!-- col-sm-6 -->
-
               <div class="col-sm-6">
                 <div class="panel panel-updates">
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-xs-7 col-lg-8">
-                        <h4 class="panel-title text-danger">Products Returned</h4>
-                        <h3>22.1%</h3>
+                        <h4 class="panel-title text-success">Total</h4>
+                        <h3><?=$total;?></h3>
                         <div class="progress">
-                          <div style="width: 22.1%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="22.1" role="progressbar" class="progress-bar progress-bar-danger">
-                            <span class="sr-only">22.1% Complete (success)</span>
+                          <div style="width:<?=$persen_tot;?>%" role="progressbar" class="progress-bar progress-bar-success">
+                            <!-- <span class="sr-only">75.7% Complete (success)</span> -->
                           </div>
                         </div>
-                        <p>Returned products this month: 22</p>
+                        <p>Total Berita hari ini</p>
                       </div>
-                      <div class="col-xs-5 col-lg-4 text-right">
-                        <input type="text" value="22" class="dial-danger">
-                      </div>
+
                     </div>
                   </div>
                 </div><!-- panel -->
               </div><!-- col-sm-6 -->
-
-            </div><!-- row -->
 
 
 

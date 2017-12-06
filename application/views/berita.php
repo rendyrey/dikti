@@ -224,10 +224,11 @@
         $date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
         $prev_date = date('Y-m-d', strtotime($date .' -1 day'));
         $next_date = date('Y-m-d', strtotime($date .' +1 day'));
+        $new_format_date = date('D, j F Y',strtotime($date));
         ?>
         <div class="btn-group">
           <a href='<?php echo site_url('Berita/tabel_berita'); echo "/$berita_aktif/$prev_date" ;?>?date=<?php echo $prev_date;?>'><button type="button" class="btn btn-primary">Prev Day</button></a>
-          <a><button type="button" class="btn btn-primary" disabled=""><?php echo $date;?></button></a>
+          <a><button type="button" class="btn btn-primary" disabled=""><?php echo $new_format_date;?></button></a>
           <a href='<?php echo site_url('Berita/tabel_berita'); echo "/$berita_aktif/$next_date" ;?>?date=<?php echo $next_date;?>'><button type="button" class="btn btn-primary">Next Day</button></a>
         </div>
         <br>

@@ -227,10 +227,10 @@ font-family: Roboto !important;
                     <?php
                     $date=date_create($tgl_post[$i]);
                      ?>
-                    <div class="timeline-date"><?php echo date_format($date,"D, Y M d");?></div>
+                    <!-- <div class="timeline-date"><?php //echo date_format($date,"D, Y M d");?></div> -->
 
-                  <?php
-                  for($j=0;$j<$berita[$i]['jml'];$j++){
+                  <!-- <?php
+                  // for($j=0;$j<$berita[$i]['jml'];$j++){
                     // echo "<li><a href=''>".$jam_berita[$i][$j]."  ".$berita[$i][$j]."</a></li>";
 
                   ?>
@@ -243,25 +243,25 @@ font-family: Roboto !important;
 
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><a href="<?php echo site_url('Berita/detail/').$id_isi_berita[$i][$j];?>"
+                            <h4 class="media-heading"><a href="<?php //echo site_url('Berita/detail/').$id_isi_berita[$i][$j];?>"
                               target="popup"
-                              onclick="window.open('<?php echo site_url('Berita/detail/').$id_isi_berita[$i][$j];?>',
+                              onclick="window.open('<?php //echo site_url('Berita/detail/').$id_isi_berita[$i][$j];?>',
                               'popup','width=600,height=600,scrollbars=no,resizable=no');
-                              return false;"><?php echo $berita[$i][$j];?></a></h4>
+                              return false;"><?php //echo $berita[$i][$j];?></a></h4>
 
                             <p class="media-usermeta">
-                              <span class="media-time"><?php echo $jam_berita[$i][$j];?></span>
+                              <span class="media-time"><?php //echo $jam_berita[$i][$j];?></span>
                               <!-- <i class="glyphicon glyphicon-map-marker"></i> <a href="">San Francisco, CA</a> -->
-                            </p>
+                            <!-- </p>
                           </div>
                         </div><!-- media -->
 
-                      </div><!-- panel-heading -->
+                      <!-- </div><!-- panel-heading -->
 
 
-                  </div>
+                  <!-- </div> -->
                   <?php
-                }
+                // }
                    ?>
 
                 </div>

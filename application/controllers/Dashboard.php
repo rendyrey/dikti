@@ -43,6 +43,18 @@ class Dashboard extends CI_Controller {
 			$data['jml_negatif'] = $berita_negatif->num_rows();
 			$berita_positif = $this->M_dashboard->get_positif_today();
 			$data['jml_positif'] = $berita_positif->num_rows();
+			$total = $data['jml_netral']+$data['jml_negatif']+$data['jml_positif'];
+			$data['total'] = $total;
+			$data['persen_tot'] = 100;
+			if($total!=0){
+				$data['persen_neg'] = ($data['jml_negatif']/$total)*100;
+				$data['persen_pos'] = ($data['jml_positif']/$total)*100;
+				$data['persen_net'] = ($data['jml_netral']/$total)*100;
+			}else{
+				$data['persen_neg'] = 0;
+				$data['persen_pos'] = 0;
+				$data['persen_net'] = 0;
+			}
 			$this->load->view('dashboard',$data);
 		}else{
 			$data['message']=$this->session->flashdata('message');
