@@ -10,6 +10,10 @@ class M_berita extends CI_Model {
 
 	}
 
+	function get_berita_hari_ini(){
+		$this->db->where('tgl_berita',date('Y-m-d'));
+		return $this->db->get('isi_berita');
+	}
 
 	function get(){
 		return $this->db->get('topik_berita');

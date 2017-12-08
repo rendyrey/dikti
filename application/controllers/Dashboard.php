@@ -55,6 +55,15 @@ class Dashboard extends CI_Controller {
 				$data['persen_pos'] = 0;
 				$data['persen_net'] = 0;
 			}
+
+
+			//untuk berita hari ini
+			$berita_today = $this->M_berita->get_berita_hari_ini();
+			$data['jml_berita_today'] = $berita_today->num_rows();
+			foreach($berita_today->result() as $value){
+				$data['judul_berita'][] = $value->judul;
+				$data['tgl_berita'][] = $value->tgl_berita;
+			}
 			$this->load->view('dashboard',$data);
 		}else{
 			$data['message']=$this->session->flashdata('message');

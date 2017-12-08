@@ -203,19 +203,25 @@ ade<!DOCTYPE html>
                       <option value="TVOne">TV One News</option>
                       <option value="Vivanews">Vivanews</option>
                       <option value="VOA">VOA News</option>
+                      <option value="BeritaSatu">Berita Satu</option>
+                      <option value="Bisnis.com">Berita Satu</option>
+                      <option value="JawaPos">Berita Satu</option>
+                      <option value="Okezone">Berita Satu</option>
+                      <option value="Tempo">Berita Satu</option>
+                      <option value="Kabar24">Berita Satu</option>
+                      <option value="SinarHarapan">Berita Satu</option>
+                      <option value="Beritagar">Berita Satu</option>
+                      <option value="Kumparan">Berita Satu</option>
+                      <option value="Rmol.co">Berita Satu</option>
+                      <option value="JPNN">Berita Satu</option>
+                      <option value="PojokSatu">Berita Satu</option>
+                      <option value="RRI">Berita Satu</option>
                     </select>
                   </form>
                   <br>
                   <div id="rssOutput">RSS-feed will be listed here...</div>
                 </div>
               </div><!-- panel -->
-
-
-
-
-
-
-
 
 
             <div class="row panel-statistics">
@@ -327,8 +333,33 @@ ade<!DOCTYPE html>
 
 
           </div><!-- col-md-12 -->
-
+          <h3>Berita Hari Ini</h3>
+          <div style="height:300px;width:500px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
+            <?php
+              for($i=0;$i<$)
+             ?>
+            <div class="panel">
+            <div class="panel-heading">
+              <h4 class="panel-title">Basic Panel</h4>
+            </div>
+            <div class="panel-body">
+              <p>While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
+              Graeco feugait ea quo. Quot erat vidit ad nam, mea quod nostro dolores ad. Elitr theophrastus vis ex. Volutpat consulatu vel ex. Viderer consulatu ei pro, in has aliquid placerat philosophia, timeam admodum minimum vim no.
+            </div>
+          </div>
+          <hr>
+          <div class="panel">
+          <div class="panel-heading">
+            <h4 class="panel-title">Basic Panel</h4>
+          </div>
+          <div class="panel-body">
+            <p>While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
+            Graeco feugait ea quo. Quot erat vidit ad nam, mea quod nostro dolores ad. Elitr theophrastus vis ex. Volutpat consulatu vel ex. Viderer consulatu ei pro, in has aliquid placerat philosophia, timeam admodum minimum vim no.
+          </div>
+        </div>
+          </div>
         </div><!-- row -->
+
 
       </div><!-- contentpanel -->
 
