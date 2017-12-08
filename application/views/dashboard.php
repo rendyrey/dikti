@@ -261,7 +261,7 @@ ade<!DOCTYPE html>
                         <h4 class="panel-title text-success">Negatif</h4>
                         <h3><?=$jml_negatif;?></h3>
                         <div class="progress">
-                          <div style="width:<?=$persen_neg;?>%"  role="progressbar" class="progress-bar progress-bar-success">
+                          <div style="width:<?=$persen_neg;?>%"  role="progressbar" class="progress-bar progress-bar">
                             <!-- <span class="sr-only">75.7% Complete (success)</span> -->
                           </div>
                         </div>
@@ -335,28 +335,31 @@ ade<!DOCTYPE html>
           </div><!-- col-md-12 -->
           <h3>Berita Hari Ini</h3>
           <div style="height:300px;width:500px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;background-color:white;">
+
             <?php
-              for($i=0;$i<$)
-             ?>
-            <div class="panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">Basic Panel</h4>
-            </div>
-            <div class="panel-body">
-              <p>While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
-              Graeco feugait ea quo. Quot erat vidit ad nam, mea quod nostro dolores ad. Elitr theophrastus vis ex. Volutpat consulatu vel ex. Viderer consulatu ei pro, in has aliquid placerat philosophia, timeam admodum minimum vim no.
-            </div>
-          </div>
-          <hr>
-          <div class="panel">
-          <div class="panel-heading">
-            <h4 class="panel-title">Basic Panel</h4>
-          </div>
-          <div class="panel-body">
-            <p>While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
-            Graeco feugait ea quo. Quot erat vidit ad nam, mea quod nostro dolores ad. Elitr theophrastus vis ex. Volutpat consulatu vel ex. Viderer consulatu ei pro, in has aliquid placerat philosophia, timeam admodum minimum vim no.
-          </div>
-        </div>
+            if($jml_berita_today!=0){
+              for($i=0;$i<$jml_berita_today;$i++){
+
+                $tgl_berita = date('D, j F Y',strtotime($tgl_berita[$i]));
+                ?>
+                <div class="panel">
+                  <div class="panel-heading">
+                    <h5 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?=$tgl_berita;?></h4>
+                  </div>
+                  <div class="panel-body">
+                  <?=$judul_berita[$i];?>
+                  </div>
+                </div>
+                <hr>
+                <?php
+              }
+
+
+            }else{
+              echo "<br><br>";
+              echo "<center><h4>Belum ada berita</h4></center>";
+            }
+            ?>
           </div>
         </div><!-- row -->
 
