@@ -115,11 +115,12 @@ ade<!DOCTYPE html>
             </li>
             <li class="nav-parent"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
               <ul class="children">
-                <li class='active'><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
+                <li class='active'><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancara</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/grafik');?>'>Grafik</a></li>
               </ul>
             </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
@@ -127,9 +128,7 @@ ade<!DOCTYPE html>
             <li><a href="<?php echo site_url('Grafik');?>"><i class="fa fa-pie-chart"></i> <span>Grafik</span></a></li>
           </ul>
         </div><!-- tab-pane -->
-
         <!-- ######################## POST MENu ##################### -->
-
         <div class="tab-pane" id="emailmenu">
           <div class="sidebar-btn-wrapper">
             <a href="<?php echo site_url('Dashboard/post');?>" class="btn btn-danger btn-block">Post Berita</a>

@@ -112,4 +112,8 @@ class ProgramMedia extends CI_Controller {
     $this->load->view('diskusi_media',$data);
   }
 
+  public function grafik(){
+    
+  }
+
 }

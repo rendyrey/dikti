@@ -286,6 +286,7 @@
                   <option value="narasumber_int">Narasumber Internal</option>
                   <option value="narasumber_eks">Narasumber Eksternal</option>
                   <option value="topik">Topik Berita</option>
+                  <option value="sub_topik">Sub Topik Berita</option>
 
                 </select>
                 <button class="btn btn-primary" form="form_cari">Submit</button>

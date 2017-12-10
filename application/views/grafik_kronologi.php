@@ -151,6 +151,7 @@
                 <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/grafik');?>'>Grafik</a></li>
               </ul>
             </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
@@ -209,6 +210,16 @@
                 <?php
               }
 
+            }else if($data == 'sub_topik'){
+              ?>
+              data.addColumn('string','Tanggal');
+              <?php
+              for($i=0;$i<$jml_topik_all;$i++){
+                ?>
+                data.addColumn('number','<?php echo $nama_sub_topik[$i];?>');
+                <?php
+              }
+
             }
             else if($data == 'media'){
               ?>
@@ -246,6 +257,23 @@
                       $k=$j+1;
                       echo $jml_topik[$i][$j];
                       if($k<$jml_topik_all){
+                        echo ",";
+                      }else{
+                        echo "]";
+                      }
+                    }
+                    if($l<$jml_tgl){
+                      echo ",";
+                    }
+                  }
+                }else if($data == 'sub_topik'){
+                  for($i=0;$i<$jml_tgl;$i++){
+                    $l = $i+1;
+                    echo "['".$tgl_berita[$i]."',";
+                    for($j=0;$j<$jml_sub_topik_all;$j++){
+                      $k=$j+1;
+                      echo $jml_sub_topik[$i][$j];
+                      if($k<$jml_sub_topik_all){
                         echo ",";
                       }else{
                         echo "]";
@@ -353,11 +381,12 @@
                   <select id="select1" name="tone" class="form-control select2-hidden-accessible" style="width: 40%" data-placeholder="Tone" tabindex="-1" aria-hidden="true" required>
                     <option value=""></option>
                     <option value="tone_berita">Tone Berita</option>
-                    <option value="tone_judul">Tone Judul</option>
+                    <!-- <option value="tone_judul">Tone Judul</option> -->
                     <option value="tone_kutipan">Tone Kutipan</option>
                     <option value="media">Media</option>
                     <option value="narasumber">Narasumber</option>
                     <option value="topik">Topik Berita</option>
+                    <!-- <option value="sub_topik">Sub Topik</option> -->
                   </select>
                   <button class="btn btn-primary" form="form_cari">Submit</button>
                 </div>
