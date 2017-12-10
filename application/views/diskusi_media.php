@@ -206,7 +206,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <strong><?php echo $message;?></strong>
           </div>
-        <?php }?>
+        <?php }?> 
         <form action="<?=site_url('ProgramMedia/post');?>" method='post' id='form_program'>
           <input type='hidden' name='id_program' value='5'>
           <div class="form-group">
