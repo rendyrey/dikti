@@ -206,13 +206,13 @@
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <strong><?php echo $message;?></strong>
           </div>
-        <?php }?> 
+        <?php }?>
         <form action="<?=site_url('ProgramMedia/post');?>" method='post' id='form_program'>
           <input type='hidden' name='id_program' value='5'>
           <div class="form-group">
             <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
               <option value=''>Sub Topik Berita</option>
-              <?php
+              <?php 
               $i=0;
                 for($i<0;$i<$jml_sub_topik;$i++){
                   // echo "<hr>";
