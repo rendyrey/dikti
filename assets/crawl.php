@@ -3,6 +3,7 @@
 $q=$_GET["q"];
 
 //find out which feed was selected
+$date=date('Y/m/d');
 if($q=='Balipost'){
   $url=("http://www.balipost.com/pendidikan");
 } elseif($q=="CNN") {
@@ -31,6 +32,14 @@ if($q=='Balipost'){
   $url=("https://www.antaranews.com/nasional/umum/");
 } elseif($q=="VOA"){
   $url=("https://www.voaindonesia.com/z/299?p=3");
+} elseif($q=="BeritaSatu"){
+  $url=("");
+} elseif($q=="Bisnis.com"){
+
+} elseif($q=="JawaPos"){
+  $url=("https://www.jawapos.com/berita-hari-ini");
+} elseif($q=="Okezone"){
+  $url=("https://news.okezone.com/indeks/$date");
 }
 
 
@@ -79,8 +88,6 @@ $kata_kunci = array(
   "ban-pt",
   "cpns",
   "plagiarisme"
-
-
 );
 
 function strposa($haystack, $needles=array(), $offset=0) {
@@ -144,7 +151,7 @@ if($q == "PR"){
     $html = new simple_html_dom();
     $html->load_file($target_url);
     foreach($html->find('article a') as $link){
-      $titletolower= strtolower($link);
+      $titletolower= strtolower($link->plaintext);
       if(strposa($titletolower, $kata_kunci, 1)) {
         echo $link."<br/>";
       }
@@ -172,7 +179,7 @@ if($q == "PR"){
     $html = new simple_html_dom();
     $html->load_file($target_url);
     foreach($html->find('h2.article-headline a') as $link){
-      $titletolower= strtolower($link);
+      $titletolower= strtolower($link->plaintext);
       if(strposa($titletolower, $kata_kunci, 1)) {
         echo $link."<br/>";
       }
@@ -214,7 +221,7 @@ if($q == "PR"){
     $html = new simple_html_dom();
     $html->load_file($target_url);
     foreach($html->find('h4.media-heading a') as $link){
-      $titletolower= strtolower($link);
+      $titletolower=strtolower($link->plaintext);
       if(strposa($titletolower, $kata_kunci, 1)) {
         echo $link."<br/>";
       }
@@ -254,6 +261,39 @@ if($q == "PR"){
       echo $link."<br/>";
     }
   }
+}else if($q == "JawaPos"){
+  $jml_page = 3;
+  for($i=1;$i<=$jml_page;$i++){
+    $target_url = "$url?page=$i";
+    $html = new simple_html_dom();
+    $html->load_file($target_url);
+    foreach($html->find('div.mainnews-terkini a') as $link){
+      $titletolower=strtolower($link);
+      if(strposa($titletolower, $kata_kunci, 1)) {
+        echo $link."<br/>";
+      }
+
+    }
+  }
+}else if($q==""){
+
+}else if($q=="Okezone"){
+  $jml_page = 3;
+  for($i=0;$i<=$jml_page;$i++){
+    $j=$i*10;
+    $target_url = "$url/$j";
+    $html = new simple_html_dom();
+    $html->load_file($target_url);
+    foreach($html->find('h4.f17 a') as $link){
+      $titletolower=strtolower($link->plaintext);
+      if(strposa($titletolower, $kata_kunci, 1)) {
+        echo $link."<br/>";
+      }
+      // echo $link."<br>";
+
+    }
+  }
 }
+
 
 ?>

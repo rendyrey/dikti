@@ -200,6 +200,21 @@ font-family: Roboto !important;
       <div class="panel-body">
         <form action='' method='post' id='form_program'>
           <div class="form-group">
+            <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
+              <option value=''>Sub Topik Berita</option>
+              <?php
+              $i=0;
+                for($i<0;$i<$jml_sub_topik;$i++){
+                  // echo "<hr>";
+                  echo "<option value=".$id_sub_topik[$i].">".$nama_sub_topik[$i]."</option>";
+                }
+               ?>
+            </select>
+          </div>
+          <div class="form-group">
+                  <input type="text" placeholder="Unit" class="form-control" name='unit' required>
+          </div>
+          <div class="form-group">
                   <input type="text" placeholder="Judul Berita" class="form-control" name='judul_berita' required>
           </div>
           <div class="form-group">
@@ -213,6 +228,9 @@ font-family: Roboto !important;
               <option value='0'>Netral</option>
 
             </select>
+          </div>
+          <div class="form-group">
+                  <input type="text" id='auto_number1' placeholder="Ad Value" class="form-control" name='ad_value' required>
           </div>
           <div class="form-group" style='margin-top:20px;'>
             <textarea name='isi_berita' id="autosize" class="form-control" rows="3" placeholder="Isi Berita" required></textarea>

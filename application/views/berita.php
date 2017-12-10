@@ -156,7 +156,7 @@
             </li>
             <li class="nav-parent"><a href=""><i class="fa fa-cube"></i> <span>Program Media</span></a>
               <ul class="children">
-                <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancaran</a></li>
+                <li><a href='<?php echo site_url('ProgramMedia/wawancara');?>'>Wawancara</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/press_release');?>'>Press Release</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
                 <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>

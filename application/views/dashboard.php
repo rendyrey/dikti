@@ -204,18 +204,18 @@ ade<!DOCTYPE html>
                       <option value="Vivanews">Vivanews</option>
                       <option value="VOA">VOA News</option>
                       <option value="BeritaSatu">Berita Satu</option>
-                      <option value="Bisnis.com">Berita Satu</option>
-                      <option value="JawaPos">Berita Satu</option>
-                      <option value="Okezone">Berita Satu</option>
-                      <option value="Tempo">Berita Satu</option>
-                      <option value="Kabar24">Berita Satu</option>
-                      <option value="SinarHarapan">Berita Satu</option>
-                      <option value="Beritagar">Berita Satu</option>
-                      <option value="Kumparan">Berita Satu</option>
-                      <option value="Rmol.co">Berita Satu</option>
-                      <option value="JPNN">Berita Satu</option>
-                      <option value="PojokSatu">Berita Satu</option>
-                      <option value="RRI">Berita Satu</option>
+                      <option value="Bisnis.com">Bisnis.com</option>
+                      <option value="JawaPos">Jawa Pos</option>
+                      <option value="Okezone">Okezone</option>
+                      <option value="Tempo">Tempo</option>
+                      <option value="Kabar24">Kabar24</option>
+                      <option value="SinarHarapan">Sinar Harapan</option>
+                      <option value="Beritagar">Beritagar</option>
+                      <option value="Kumparan">Kumparan</option>
+                      <option value="Rmol.co">Rmol.co</option>
+                      <option value="JPNN">JPNN</option>
+                      <option value="PojokSatu">Pojok Satu</option>
+                      <option value="RRI">RRI</option>
                     </select>
                   </form>
                   <br>

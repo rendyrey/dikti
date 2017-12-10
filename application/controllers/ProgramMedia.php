@@ -72,6 +72,17 @@ class ProgramMedia extends CI_Controller {
       $data['topik_berita'][$i]= $row->topik_berita;
       $i++;
     }
+
+    // untuk sub topik_berita
+    $query_topik = $this->M_berita->get_all_sub_topik();
+		$data['jml_sub_topik'] = $query_topik->num_rows();
+		$i=0;
+		foreach($query_topik->result() as $row){
+			$data['id_sub_topik'][$i] = $row->id_sub_topik;
+			$data['id_berita_sub'][$i] = $row->id_berita;
+			$data['nama_sub_topik'][$i] = $row->nama_sub_topik;
+			$i++;
+		}
     $this->load->view('press_release',$data);
   }
 
