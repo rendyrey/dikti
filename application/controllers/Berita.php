@@ -185,6 +185,7 @@ class Berita extends CI_Controller {
 
     $this->M_berita->insert_isi_berita($data);
     $this->session->set_flashdata('message','Post Berita Berhasil!');
+
     redirect('Dashboard/post');
 
   }

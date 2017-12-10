@@ -199,15 +199,46 @@
 
 
       <div class="panel-body">
-        <form action='' method='post' id='form_program'>
+        <?php
+          if(isset($message)){
+         ?>
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <strong><?php echo $message;?></strong>
+          </div>
+        <?php }?>
+        <form action="<?=site_url('ProgramMedia/post');?>" method='post' id='form_program'>
+          <input type='hidden' name='id_program' value='3'>
           <div class="form-group">
-            <input type="text" placeholder="Judul Berita" class="form-control" name='judul_berita' required>
+            <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
+              <option value=''>Sub Topik Berita</option>
+              <?php
+              $i=0;
+                for($i<0;$i<$jml_sub_topik;$i++){
+                  // echo "<hr>";
+                  echo "<option value=".$id_sub_topik[$i].">".$nama_sub_topik[$i]."</option>";
+                }
+               ?>
+            </select>
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Program" class="form-control" name='program' required>
+            <select name ='id_unit' class="form-control select_search" style="width: 100%" data-placeholder="Unit" required>
+              <option value=''>Sub Topik Berita</option>
+              <?php
+              $i=0;
+                for($i<0;$i<$jml_unit;$i++){
+                  // echo "<hr>";
+                  echo "<option value=".$id_unit[$i].">".$nama_unit[$i]."</option>";
+                }
+               ?>
+            </select>
           </div>
           <div class="form-group">
-            <select name='tone_berita' class="form-control select_search" style="width: 100%" data-placeholder="Tone Berita">
+                  <input type="text" placeholder="Judul Berita" class="form-control" name='judul' required>
+          </div>
+
+          <div class="form-group">
+            <select name='tone' class="form-control select_search" style="width: 100%" data-placeholder="Tone Berita">
               <option value=''></option>
               <option value='1'>Positif</option>
               <option value='-1'>Negatif</option>
@@ -215,8 +246,11 @@
 
             </select>
           </div>
+          <div class="form-group">
+                  <input type="text" id='auto_number1' placeholder="Ad Value" class="form-control" name='ad_value' required>
+          </div>
           <div class="form-group" style='margin-top:20px;'>
-            <textarea name='isi_berita' id="autosize" class="form-control" rows="3" placeholder="Isi Berita" required></textarea>
+            <textarea name='isi' id="autosize" class="form-control" rows="3" placeholder="Isi Berita" required></textarea>
           </div>
           <div class="form-group" style='margin-top:30px;'>
             <button class="btn btn-primary btn-block" form='form_program'>Submit</button>
