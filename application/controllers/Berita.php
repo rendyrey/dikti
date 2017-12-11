@@ -337,7 +337,7 @@ class Berita extends CI_Controller {
     $data['string'] = $string;
     $tone =  $this->load->view('tone/examples/tone', $data,TRUE);
     // error_reporting(0);
-    // echo $tone."haha";
+    echo $tone."haha";
     // echo $string;
     // $tone = $this->load->view('tone/examples/tone',$data,TRUE);
     $sentiment=0;

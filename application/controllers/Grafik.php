@@ -40,7 +40,9 @@ class Grafik extends CI_Controller {
 
 	public function index(){
 		$this->check_login();
-		$query = $this->M_grafik->get_count_tone_berita();
+		$tgl_awal = date('Y-m-d');
+		$tgl_akhir = date('Y-m-d');
+		$query = $this->M_grafik->get_count_tone_berita_by($tgl_awal,$tgl_akhir);
 		$i=0;
 		$data['jml_grafik'] = $query->num_rows();
 		foreach($query->result() as $row){
