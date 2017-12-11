@@ -91,10 +91,27 @@
         <p><?php echo $isi_berita."&nbsp;".$label_berita;?></p>
       </div><!-- panel-heading -->
       <div class="panel-body">
+      <style>  img {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 150px; /* Set a small width */
+}
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+</style>
+<body>
+
+<a href="<?php echo base_url().'assets/img_berita/'.$gambar;?>" target="_blank">
+  <img src="<?php echo base_url().'assets/img_berita/'.$gambar;?>" alt="Berita">
+</a>
         <p class="lead">
           <blockquote>
             <i class="fa fa-quote-left"></i>
-            <p><?php echo $kutipan."&nbsp;".$label_kutipan;?></p>
+            <p><?php echo $gambar."&nbsp;".$label_kutipan;?></p>
             <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
           </blockquote>
         </p>
@@ -110,7 +127,7 @@
       window.print();
   }
   </script>
-<button>Get Image</button>
+<!-- <button>Get Image</button> -->
 </section>
 
 

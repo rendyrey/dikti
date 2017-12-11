@@ -118,7 +118,8 @@ $pos = array(
 'kekuatan',
 'penguatan',
 'capai',
-'pencapaian'
+'pencapaian',
+
 );
 echo serialize($pos);
 ?>

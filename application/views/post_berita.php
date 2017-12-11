@@ -185,7 +185,17 @@
                 <strong><?php echo $message;?></strong>
               </div>
             <?php }?>
-              <form action="<?php echo site_url('Berita/post');?>" method=post id='form_berita'>
+              <form action="<?php echo site_url('Berita/post');?>" method=post id='form_berita' enctype="multipart/form-data">
+                Jenis Berita:
+                <label class="rdiobox">
+                  <input type="radio" name="jenis_berita" checked="">
+                  <span>Kemenristekdikti</span><br>
+                </label>
+                <label class="rdiobox">
+                  <input type="radio" name="jenis_berita">
+                  <span>Non-Kemenristekdikti</span>
+                </label>
+
                 <div class="form-group">
                   <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
                     <option value=''>Sub Topik Berita</option>
@@ -298,6 +308,10 @@
           <option value="">Sub Narasumber</option>
           </select>
         </div>
+        <div class="form-group">
+          Upload Gambar Berita
+          <input type="file" name="file_upload" required>
+        </div>
 
 
 
@@ -311,6 +325,7 @@
              <div class="form-group" style="margin-top:30px;">
                <input name='link_berita' type="text" placeholder="Link Berita" class="form-control" required>
              </div>
+
 
              <div class="input-group">
                 <span class="input-group-addon">Rp</span>

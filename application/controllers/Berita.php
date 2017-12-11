@@ -121,6 +121,7 @@ class Berita extends CI_Controller {
       $data['link_berita'] = $rows->link_berita;
       $data['ad_value'] = $rows->ad_value;
       $data['news_value'] = $rows->news_value;
+      $data['gambar'] = $rows->gambar;
       $date_post = strtotime($rows->tgl_berita);
       $data['tgl_berita'] = date('D, dS F Y',$date_post);
       $query2 = $this->M_berita->get_media_where($rows->id_media);
@@ -161,7 +162,12 @@ class Berita extends CI_Controller {
     $jml = $query->num_rows();
 
     $jml++;
-
+    $nama_file = $_FILES['file_upload']['name'];
+    $file_tmp = $_FILES['file_upload']['tmp_name'];
+    $target = "assets/img_berita/".$nama_file;
+    move_uploaded_file($file_tmp,$target);
+    $data['gambar'] = $nama_file;
+    $data['jenis_berita'] = $this->input->post('jenis_berita');
     $data['id_berita'] = $_POST['id_berita'];
     $data['wartawan'] = $_POST['wartawan'];
     $data['id_sub_topik'] = $_POST['id_sub_topik'];
@@ -329,8 +335,9 @@ class Berita extends CI_Controller {
   public function calculate_tone($string){
     $this->check_login();
     $data['string'] = $string;
-    $tone =   $this->load->view('tone/examples/tone', $data,TRUE);
-    // echo $tone;
+    $tone =  $this->load->view('tone/examples/tone', $data,TRUE);
+    // error_reporting(0);
+    // echo $tone."haha";
     // echo $string;
     // $tone = $this->load->view('tone/examples/tone',$data,TRUE);
     $sentiment=0;

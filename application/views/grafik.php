@@ -350,7 +350,7 @@
           }
         }else if($tampil!='narasumber'){
           for($i=0;$i<$jml_grafik;$i++){
-            echo "'".$topik_berita[$i]."'";
+            echo "'".$tone[$i]."'";
             if($i<$jml_grafik-1){
               echo ",";
             }else{
