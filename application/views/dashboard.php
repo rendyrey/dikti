@@ -347,7 +347,7 @@ ade<!DOCTYPE html>
                     <h5 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?=$tgl_berita;?></h4>
                   </div>
                   <div class="panel-body">
-                  <?=$judul_berita[$i];?>
+                  <a href='<?php echo site_url('Berita/detail_berita/').$id_berita[$i];?>'><?=$judul_berita[$i];?></a>
                   </div>
                 </div>
                 <hr>

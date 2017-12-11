@@ -62,6 +62,7 @@ class Dashboard extends CI_Controller {
 			$data['jml_berita_today'] = $berita_today->num_rows();
 			foreach($berita_today->result() as $value){
 				$data['judul_berita'][] = $value->judul;
+				$data['id_berita'][] = $value->id_berita;
 				$data['tgl_berita'][] = $value->tgl_berita;
 			}
 			$this->load->view('dashboard',$data);
