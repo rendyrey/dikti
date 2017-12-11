@@ -280,12 +280,13 @@
                   <option value=""></option>
                   <option value="tone_berita">Tone Berita</option>
                   <!-- <option value="tone_judul">Tone Judul</option> -->
-                  <option value="tone_kutipan">Tone Kutipan</option>
+                  <!-- <option value="tone_kutipan">Tone Kutipan</option> -->
                   <option value="media">Media</option>
                   <option value="narasumber">Narasumber</option>
                   <option value="narasumber_int">Narasumber Internal</option>
                   <option value="narasumber_eks">Narasumber Eksternal</option>
                   <option value="topik">Topik Berita</option>
+                  <option value="sub_topik">Sub Topik Berita</option>
 
                 </select>
                 <button class="btn btn-primary" form="form_cari">Submit</button>
@@ -321,7 +322,86 @@
             </div>
           </form>
           <br>
-          <div id="piechart" style="width: 100%; height: 500px;"></div>
+          <div id="container" style="width: 100%; height: 500px;"></div>
+          <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+        </script>
+        <script src = "https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+          <script>
+          Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Grafik Topik Berita'
+    },
+    xAxis: {
+      categories:[
+      <?php
+        if($tampil=='topik'){
+          array_multisort($jml_topik,SORT_DESC,$topik_berita);
+          for($i=0;$i<$jml_grafik;$i++){
+            echo "'".$topik_berita[$i]."'";
+            if($i<$jml_grafik-1){
+              echo ",";
+            }else{
+              echo "]";
+            }
+          }
+        }else if($tampil!='narasumber'){
+          for($i=0;$i<$jml_grafik;$i++){
+            echo "'".$tone[$i]."'";
+            if($i<$jml_grafik-1){
+              echo ",";
+            }else{
+              echo "]";
+            }
+          }
+        }
+       ?>
+        // categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total Topik Berita'
+        }
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: 'Jumlah',
+        data:[
+        <?php
+          if($tampil=='topik'){
+            for($i=0;$i<$jml_grafik;$i++){
+              echo $jml_topik[$i];
+              if($i<$jml_grafik-1){
+                echo ",";
+              }else{
+                echo "]";
+              }
+            }
+          }else if($tampil!='narasumber'){
+            for($i=0;$i<$jml_grafik;$i++){
+              echo $jml_tone[$i];
+              if($i<$jml_grafik-1){
+                echo ",";
+              }else{
+                echo "]";
+              }
+            }
+          }
+         ?>
+    }]
+});
+</script>
           <br>
           <br>
         </div>

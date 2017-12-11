@@ -137,6 +137,7 @@
                   <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
                   <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
                   <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+                  <li><a href='<?php echo site_url('ProgramMedia/grafik');?>'>Grafik</a></li>
                 </ul>
               </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
@@ -184,7 +185,17 @@
                 <strong><?php echo $message;?></strong>
               </div>
             <?php }?>
-              <form action="<?php echo site_url('Berita/post');?>" method=post id='form_berita'>
+              <form action="<?php echo site_url('Berita/post');?>" method=post id='form_berita' enctype="multipart/form-data">
+                Jenis Berita:
+                <label class="rdiobox">
+                  <input type="radio" name="jenis_berita" checked="">
+                  <span>Kemenristekdikti</span><br>
+                </label>
+                <label class="rdiobox">
+                  <input type="radio" name="jenis_berita">
+                  <span>Non-Kemenristekdikti</span>
+                </label>
+
                 <div class="form-group">
                   <select name ='id_sub_topik' id="cmb_sub_topik" class="form-control select_search" style="width: 100%" data-placeholder="Sub Topik Berita" required>
                     <option value=''>Sub Topik Berita</option>
@@ -297,6 +308,10 @@
           <option value="">Sub Narasumber</option>
           </select>
         </div>
+        <div class="form-group">
+          Upload Gambar Berita
+          <input type="file" name="file_upload" accept=".gif,.jpg,.jpeg,.png" required>
+        </div>
 
 
 
@@ -310,6 +325,7 @@
              <div class="form-group" style="margin-top:30px;">
                <input name='link_berita' type="text" placeholder="Link Berita" class="form-control" required>
              </div>
+
 
              <div class="input-group">
                 <span class="input-group-addon">Rp</span>

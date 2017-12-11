@@ -42,6 +42,10 @@ font-family: Roboto !important;
 
   <script src="<?php echo base_url();?>assets/js/quirk.js"></script>
   <script src="<?php echo base_url();?>assets/js/dashboard.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<script src = "https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 </head>
 <body>
   <link rel="stylesheet" href="<?php echo base_url();?>assets/lib/select2/select2.css">
@@ -137,6 +141,8 @@ font-family: Roboto !important;
                   <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
                   <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
                   <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+                  <li><a href='<?php echo site_url('ProgramMedia/grafik');?>'>Grafik</a></li>
+
                 </ul>
               </li>
             <li class="active"><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
@@ -175,36 +181,62 @@ font-family: Roboto !important;
           <h4 class="panel-title">Media & Title</h4>
           <p>Tabel Media & Title</p></div>
         <div class="panel-body">
-          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-          <script type="text/javascript">
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
 
-            function drawChart() {
 
-              var data = google.visualization.arrayToDataTable([
-                ['Media','Total Media'],
-                <?php
-                  $i=0;
-                  for($i=0;$i<$jml_media;$i++){
-                    echo "['".$nama_media[$i]."',".$total[$i]."]";
-                    if($i<$jml_media-1){
-                      echo ",";
-                    }
-                  }
-                 ?>
 
-              ]);
 
-              var options = {
-                title: 'Grafik Jumlah Sumber Media'
-              };
 
-              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-              chart.draw(data, options);
-            }
-          </script>
+ <div id = "grafik" style = "width: 100%; height: 500px; margin: 0 auto"></div>
+ <script language = "JavaScript">
+ Highcharts.chart('grafik', {
+        chart: {
+          plotBackgroundColor: null,
+          plotBorderWidth: null,
+          plotShadow: false,
+          type: 'pie'
+       },
+       title: {
+          text: 'Browser market shares January, 2015 to May, 2015'
+       },
+       tooltip: {
+          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+       },
+       plotOptions: {
+          pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+              enabled: true,
+              format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+              style: {
+                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+             }
+          }
+       }
+    },
+    series: [{
+       name: 'Brands',
+       colorByPoint: true,
+       data: [
+         <?php
+         for($i=0;$i<$jml_media;$i++){
+           echo "{name: '".$nama_media[$i]."',y:".$total[$i]."}";
+           if($i<$jml_media-1){
+             echo ",";
+           }else{
+             echo "]";
+           }
+         }
+         ?>
+         // {name: 'IE',y: 56.33},
+         // {name: 'Chrome',y: 24.03},
+         // {name: 'Firefox',y: 10.38},
+         // {name: 'Safari',y: 4.77},
+         // {name: 'Opera',y: 0.91},
+         // {name: 'Other',y: 0.2}]
+   }]
+});
+</script>
           <form action=<?php echo site_url('Media/group');?> method='post' id="form_cari">
             <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
@@ -213,10 +245,11 @@ font-family: Roboto !important;
             </div>
           </form>
 
-          <div id="piechart" style="width: 100%;height:500px;"></div>
+
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <?php
               $i=0;
+              array_multisort($total,SORT_DESC,$nama_media);
               for($i=0;$i<$jml_media;$i++){
                 echo "<li class='nav-parent'>
                   <a href=''><i class='fa fa-check-square'></i> <span>".$nama_media[$i]." (".$total[$i].")</span></a>
@@ -282,7 +315,6 @@ font-family: Roboto !important;
 </section>
 
 
-<script src="<?php echo base_url();?>assets/lib/jquery/jquery.js"></script>
 <script src="<?php echo base_url();?>assets/lib/jquery-ui/jquery-ui.js"></script>
 <script src="<?php echo base_url();?>assets/lib/bootstrap/js/bootstrap.js"></script>
 <script src="<?php echo base_url();?>assets/lib/jquery-autosize/autosize.js"></script>

@@ -13,7 +13,7 @@ $sentiment = new \PHPInsight\Sentiment();
 
 
 	// calculations:
-	$scores = $sentiment->score($string);
+	// $scores = $sentiment->score($string);
 	$class = $sentiment->categorise($string);
 
 	// output:

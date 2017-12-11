@@ -40,7 +40,9 @@ class Grafik extends CI_Controller {
 
 	public function index(){
 		$this->check_login();
-		$query = $this->M_grafik->get_count_tone_berita();
+		$tgl_awal = date('Y-m-d');
+		$tgl_akhir = date('Y-m-d');
+		$query = $this->M_grafik->get_count_tone_berita_by($tgl_awal,$tgl_akhir);
 		$i=0;
 		$data['jml_grafik'] = $query->num_rows();
 		foreach($query->result() as $row){
@@ -218,7 +220,7 @@ class Grafik extends CI_Controller {
 				$i=0;
 				$data['jml_grafik'] = $query->num_rows();
 				foreach($query->result() as $row){
-					$data['sub_topik_berita'][$i] = $row->id_sub_topik;
+					$data['sub_topik_berita'][$i] = $row->alias;
 					$data['id_sub_topik'][$i] = $row->id_sub_topik;
 					$id_sub_topik = $data['id_sub_topik'][$i];
 					// $data['tone_berita'][$i] = $row->tone_kutip;
@@ -227,7 +229,12 @@ class Grafik extends CI_Controller {
 					$data['jml_sub_topik'][$i] = $baris->jml_sub_topik;
 					$i++;
 				}
-				$data['judul'] = "Grafik Jumlah Topik Secara Keseluruhan";
+				$data['jml_grafik'] = 10;
+				array_multisort($data['jml_sub_topik'],SORT_DESC,$data['id_sub_topik'],$data['sub_topik_berita']);
+				$data['judul'] = "Grafik Jumlah Sub Topik Secara Keseluruhan";
+				// echo "<pre>";
+				// print_r($data);
+				// echo "</pre>";
 
 				$this->load->view('grafik', $data);
 			}
@@ -460,7 +467,7 @@ class Grafik extends CI_Controller {
 				}
 
 			}else if($_POST['tone']=='sub_topik'){
-				$data['data'] = 'topik';
+				$data['data'] = 'sub_topik';
 				$data['judul'] = "Kronologi Grafik Sub Topik Berita";
 				$tgl_awal = $_POST['tgl_awal'];
 				$tgl_akhir = $_POST['tgl_akhir'];
@@ -472,12 +479,12 @@ class Grafik extends CI_Controller {
 					$tgl = $data['tgl_berita'][$i];
 					$query_sub_topik=$this->M_berita->get_all_sub_topik();
 					$j=0;
-					$data['jml_sub_topik'] = $query_sub_topik->num_rows();
+					$data['jml_sub_topik_all'] = $query_sub_topik->num_rows();
 					foreach($query_sub_topik->result() as $row_sub_topik){
-						$query_cari_jml = $this->M_grafik->get_sub_topik($tgl,$row_topik->id_sub_berita);
+						$query_cari_jml = $this->M_grafik->get_sub_topik($tgl,$row_sub_topik->id_sub_topik);
 						$result = $query_cari_jml->row();
-						$data['jml_sub_topik'][$i][$j] = $result->jml_topik;
-						$data['nama_sub_topik'][$j] = $row_sub_topik->sub_topik;
+						$data['jml_sub_topik'][$i][$j] = $result->jml_sub_topik;
+						$data['nama_sub_topik'][$j] = $row_sub_topik->alias;
 						$j++;
 					}
 					$i++;

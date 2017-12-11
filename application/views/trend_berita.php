@@ -137,6 +137,8 @@ font-family: Roboto !important;
                   <li><a href='<?php echo site_url('ProgramMedia/konferensi_pers');?>'>Konferensi Pers</a></li>
                   <li><a href='<?php echo site_url('ProgramMedia/liputan_lapangan');?>'>Liputan Lapangan</a></li>
                   <li><a href='<?php echo site_url('ProgramMedia/diskusi_media');?>'>Diskusi Media</a></li>
+                  <li><a href='<?php echo site_url('ProgramMedia/grafik');?>'>Grafik</a></li>
+
                 </ul>
               </li>
             <li><a href="<?php echo site_url('Media');?>"><i class="fa fa-list-alt"></i> <span>Media & Title</span></a></li>
