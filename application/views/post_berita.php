@@ -310,7 +310,7 @@
         </div>
         <div class="form-group">
           Upload Gambar Berita
-          <input type="file" name="file_upload" required>
+          <input type="file" name="file_upload" accept=".gif,.jpg,.jpeg,.png" required>
         </div>
 
 
