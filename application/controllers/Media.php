@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Cabang D
  * Cabang E
  * Cabang F
+ * Cabang 3
  */
 class Media extends CI_Controller {
 
