@@ -6,9 +6,9 @@ class Media extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('M_berita'); 
-		$this->load->model('M_narasumber'); 
-		$this->load->model('M_media'); 
+		$this->load->model('M_berita');
+		$this->load->model('M_narasumber');
+		$this->load->model('M_media');
 	}
 
 	public function check_login(){
