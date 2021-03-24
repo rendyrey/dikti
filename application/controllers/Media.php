@@ -11,12 +11,8 @@ class Media extends CI_Controller {
 		$this->load->model('M_media');
 	}
 
-	public function coba(){
-		
-	}
-
 	public function cobacoba(){
-		
+
 	}
 
 	public function check_login(){
