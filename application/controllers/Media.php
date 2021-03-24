@@ -15,6 +15,10 @@ class Media extends CI_Controller {
 		
 	}
 
+	public function cobacoba(){
+		
+	}
+
 	public function check_login(){
 		if($this->session->userdata('login')!=TRUE && $this->session->userdata('user')!='administrator'){
 			$data['message']=$this->session->flashdata('message');
