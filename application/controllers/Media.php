@@ -13,6 +13,8 @@ class Media extends CI_Controller {
 
 	public function cobacoba(){
 
+
+		
 	}
 
 	public function check_login(){
