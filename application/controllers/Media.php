@@ -59,7 +59,7 @@ class Media extends CI_Controller {
 		$data['jml_media'] = $i;
 		$query=$this->M_berita->get();
 		$data['jml'] = $query->num_rows();
-		$i=0;
+		$i=0; 
 		foreach($query->result() as $row){
 			$data['id_berita'][$i] = $row->id_berita;
 			$data['topik_berita'][$i]= $row->topik_berita;
