@@ -14,7 +14,6 @@ class Media extends CI_Controller {
 		if($this->session->userdata('login')!=TRUE && $this->session->userdata('user')!='administrator'){
 			$data['message']=$this->session->flashdata('message');
 			$data['action']='Login/process_login_admin';
-			
 			redirect('Login');
 		}
 	}
