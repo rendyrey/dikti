@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * Cabang
+ */
 class Media extends CI_Controller {
 
 	/**
