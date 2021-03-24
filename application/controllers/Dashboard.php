@@ -1,6 +1,7 @@
 <?php
 /**
  * Master 1
+ * Master 2
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
