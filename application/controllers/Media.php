@@ -14,22 +14,9 @@ class Media extends CI_Controller {
 		if($this->session->userdata('login')!=TRUE && $this->session->userdata('user')!='administrator'){
 			$data['message']=$this->session->flashdata('message');
 			$data['action']='Login/process_login_admin';
-			// $this->load->view('templates/script_header');
-			// $this->load->view('index',$data);
-			// exit;
+			
 			redirect('Login');
 		}
-	}
-
-	public function testMath(){
-	
-		
-
-		
-	}
-
-	public function hitungBangun(){
-		
 	}
 
 	public function index(){
