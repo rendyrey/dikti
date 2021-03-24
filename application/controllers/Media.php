@@ -107,4 +107,8 @@ class Media extends CI_Controller {
 			$this->load->view('media_title', $data);
 		}
 	}
+
+	public function hitungKelilingLingkaran(){
+		
+	}
 }
