@@ -112,11 +112,8 @@ class Media extends CI_Controller {
 		}
 	}
 
-	public function hitungKelilingLingkaran(){
-
-	}
-
-	public function master(){
+	public function MediaAnjay(){
 		
 	}
 }
+
