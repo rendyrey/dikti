@@ -11,6 +11,13 @@ class Media extends CI_Controller {
 		$this->load->model('M_media');
 	}
 
+
+	public function cobacoba(){
+
+
+		
+	}
+
 	public function check_login(){
 		if($this->session->userdata('login')!=TRUE && $this->session->userdata('user')!='administrator'){
 			$data['message']=$this->session->flashdata('message');
@@ -70,6 +77,9 @@ class Media extends CI_Controller {
 		$this->load->view('media_title', $data);
 
 	}
+
+
+	
 
 	public function group(){
 		if($_POST['tgl']==''){
