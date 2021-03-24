@@ -1,4 +1,7 @@
 <?php
+/**
+ * Master 1
+ */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
