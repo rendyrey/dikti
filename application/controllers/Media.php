@@ -21,17 +21,6 @@ class Media extends CI_Controller {
 		}
 	}
 
-	public function testMath(){
-	
-		
-
-		
-	}
-
-	public function hitungBangun(){
-		
-	}
-
 	public function index(){
 		$this->check_login();
 		$query = $this->M_media->get_media_group();
