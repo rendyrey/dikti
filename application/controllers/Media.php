@@ -11,8 +11,8 @@ class Media extends CI_Controller {
 		$this->load->model('M_media');
 	}
 
-	public function coba(){
-		
+	public function cobacoba(){
+
 	}
 
 	public function check_login(){
@@ -27,6 +27,10 @@ class Media extends CI_Controller {
 	}
 
 	public function testMath(){
+		
+	}
+
+	public function hitungBangun(){
 		
 	}
 
@@ -108,11 +112,12 @@ class Media extends CI_Controller {
 		}
 	}
 
-	public function hitungKelilingLingkaran(){
-
+	public function MediaAnjay(){
+		
 	}
 
-	public function master(){
+	public function MEMEDIA(){
 		
 	}
 }
+
