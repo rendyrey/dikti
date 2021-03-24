@@ -76,10 +76,6 @@ class Dashboard extends CI_Controller {
 			$this->load->view('index',$data);
 		}
 	}
-
-	public function DashboardFeat(){
-
-	}
 	
 	public function check_login(){
 		if($this->session->userdata('login')!=TRUE && $this->session->userdata('user')!='administrator'){
