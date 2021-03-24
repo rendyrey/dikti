@@ -21,13 +21,6 @@ class Media extends CI_Controller {
 		}
 	}
 
-	public function testMath(){
-	
-		
-
-		
-	}
-
 	public function hitungBangun(){
 		
 	}
