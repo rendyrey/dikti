@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * master 1
+ * Cabang3 status
  */
 class Dashboard extends CI_Controller {
 	
