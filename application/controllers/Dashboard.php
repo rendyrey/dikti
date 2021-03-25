@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller {
 
 	/**
 	 * Konstruktor
+	 * Tmabh
 	 */
 	public function __construct()
 	{
