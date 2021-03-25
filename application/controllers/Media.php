@@ -1,9 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/**
- * Cabang 1
- */
+
 class Media extends CI_Controller {
+	/**
+	 * @author Rendy
+	 */
 
 	/**
 	* Index Page for this controller.
