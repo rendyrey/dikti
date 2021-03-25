@@ -1,20 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/**
- * Cabang
- * Cabang2 a
- * Cabant2 b
- * Cabang C
- * Cabang D
- * Cabang E
- * Cabang F
- * Cabang 3
- * Cabang 3A
- * Cabang 3B
- * Cabang 3C
- * Cabang 4D
- * Cabang E
- */
+
 class Media extends CI_Controller {
 
 	/**
